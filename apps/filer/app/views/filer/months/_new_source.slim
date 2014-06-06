@@ -11,9 +11,11 @@
   .field
     = f.file_field :document
   .field
-    = f.text_field :name, placeholder: 'name of file'
+    = f.label :name, "Describe this file"
+    = f.text_field :name, placeholder: 'AMEX, or Bank File'
   .field
-    = f.text_field :note, placeholder: 'comments or questions'
+    = f.label :note, 'comments or questions'
+    = f.text_field :note, placeholder: 'I bought a new car.'
   .actions
     = f.submit 'add file'
 
