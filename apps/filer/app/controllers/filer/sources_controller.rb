@@ -9,6 +9,8 @@ module Filer
     end
 
     def show
+      @comment = Comment.new
+      @comments = Comment.where(source_id: params[:id]).order('created_at DESC')
     end
 
     def new

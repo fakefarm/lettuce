@@ -1,13 +1,7 @@
 table
-  thead
-    tr
-      th Name
-      th Highlights
-      th
-
   tbody
     - @sources.each do |source|
       tr
         td= link_to source.document.model.name, source.document.url
         td= source.note
-        td discussion
+        td= link_to 'discuss this file', source_path(source)

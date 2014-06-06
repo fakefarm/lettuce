@@ -5,12 +5,13 @@ module Filer
     before_action :set_month, only: [:show, :edit, :update, :destroy]
 
     def index
-      @months = Month.all
+      @months = Month.all.order('created_at DESC')
     end
 
     def show
       @source = Source.new
       @sources = Source.where(month_id: params[:id])
+      # @comments = Comment.where(source_id: 2) TODO - show all comments in a month
     end
 
     def new

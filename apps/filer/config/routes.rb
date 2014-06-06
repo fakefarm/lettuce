@@ -3,4 +3,5 @@ Filer::Engine.routes.draw do
 
   resources :sources
   resources :months
+  root to: 'months#index'
 end

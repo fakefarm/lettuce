@@ -9,17 +9,11 @@
           li= message
   = f.hidden_field :month_id, value: @month.id
   .field
-    = f.label :name
-    br
-      = f.text_field :name
+    = f.file_field :document
   .field
-    = f.label :note
-    br
-      = f.text_field :note
+    = f.text_field :name, placeholder: 'name of file'
   .field
-    = f.label :document
-    br
-      = f.file_field :document
+    = f.text_field :note, placeholder: 'comments or questions'
   .actions
-    = f.submit
+    = f.submit 'add file'
 
