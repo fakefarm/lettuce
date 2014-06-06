@@ -21,7 +21,7 @@ module Filer
     def create
       @source = Source.new(source_params)
       if @source.save
-        redirect_to @source, notice: 'Source was successfully created.'
+        redirect_to month_path(@source.month_id), notice: 'Source was successfully created.'
       else
         render :new
       end
