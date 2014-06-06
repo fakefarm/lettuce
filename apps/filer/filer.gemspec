@@ -18,12 +18,15 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 4.1.0"
   s.add_dependency 'carrierwave'
+  s.add_dependency 'fog', "~> 1.3.1"
+
 
   s.add_dependency 'slim'
   s.add_dependency 'bourbon'
   s.add_dependency 'bitters'
   s.add_dependency 'neat'
   s.add_dependency 'refills'
+
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "pry-rails"

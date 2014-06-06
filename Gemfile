@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'dotenv-rails', :groups => [:development, :test]
+gem "fog", "~> 1.3.1"
+
 
 gem 'filer', path: "apps/filer"
 
