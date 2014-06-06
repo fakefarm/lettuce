@@ -1,4 +1,5 @@
 require_dependency "filer/application_controller"
+require_dependency "filer/document_uploader"
 
 module Filer
   class MonthsController < ApplicationController
