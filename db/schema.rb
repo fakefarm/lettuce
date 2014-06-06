@@ -11,15 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140605074800) do
-
-  create_table "filer_comments", force: true do |t|
-    t.string   "body"
-    t.integer  "source_id"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20140606011519) do
 
   create_table "filer_months", force: true do |t|
     t.string   "name"
@@ -29,11 +21,11 @@ ActiveRecord::Schema.define(version: 20140605074800) do
 
   create_table "filer_sources", force: true do |t|
     t.string   "name"
-    t.string   "comments"
+    t.string   "note"
+    t.string   "document"
     t.integer  "month_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "document"
   end
 
 end
