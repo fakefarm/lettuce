@@ -1,2 +1,5 @@
-= require 'pry'; binding.pry
-p= link_to 'dashboard'
+/ How do I use the path helpers? I want to get to months_index, but none of the following work;
+/ months_path
+/ main_app.months_path
+/ Filer::Month.months_path
+p= link_to 'dashboard', '/dashboard'
