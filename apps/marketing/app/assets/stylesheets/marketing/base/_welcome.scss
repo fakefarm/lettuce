@@ -9,12 +9,26 @@ body {
     margin-top: 4em;
     @include outer-container;
   }
+  .img {
+    width: 100%;
+  }
+  img {
+    width: 20%;
+    margin-left: 40%;
+  }
   a {
     color: white;
     text-align: right;
     display: block;
     width: 100%;
-    padding-right: 2em;
+    padding-right: 1em;
+  }
+  ul {
+    text-align: right;
+  }
+  li {
+    display: inline-block;
+    font-size: 1.2em;
   }
   h1 {
     // font-family: 'Source Code Pro';
