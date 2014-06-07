@@ -3,6 +3,8 @@ require_dependency "filer/document_uploader"
 
 module Filer
   class MonthsController < ApplicationController
+    http_basic_authenticate_with name: ENV['lettuce_name'], password: ENV['lettuce_password']
+
     before_action :set_month, only: [:show, :edit, :update, :destroy]
 
     def index
