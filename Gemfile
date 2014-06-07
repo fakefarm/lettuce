@@ -5,6 +5,7 @@ gem "fog", "~> 1.3.1"
 
 
 gem 'filer', path: "apps/filer"
+gem 'people', path: "apps/people"
 
 gem 'bourbon'
 gem 'neat'

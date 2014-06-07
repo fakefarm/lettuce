@@ -11,6 +11,17 @@ PATH
       refills
       slim
 
+PATH
+  remote: apps/people
+  specs:
+    people (0.0.1)
+      bitters
+      bourbon
+      neat
+      rails (~> 4.1.0)
+      refills
+      slim
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -183,6 +194,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   neat
+  people!
   pg
   rails (= 4.1.0)
   rails_12factor
