@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem "fog", "~> 1.3.1"
 
+gem 'pry-rails', :group => :development
+gem 'quiet_assets', :group => :development
 
 gem 'filer', path: "apps/filer"
 gem 'marketing', path: "apps/marketing"
