@@ -2,6 +2,9 @@ table
   tbody
     - @sources.each do |source|
       tr
-        td= link_to source.document.model.name, source.document.url
+        td= link_to source.document.url do
+          =source.document.model.name
+          '
+          .fa.fa-file-o
         td= source.note
         td= link_to 'discuss this file', source_path(source)

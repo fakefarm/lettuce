@@ -1,4 +1,10 @@
-nav
+nav.filer-nav
   ul
-    li= link_to 'overview', months_path
-    li= link_to 'new month', new_month_path
+    li= link_to months_path do
+      .fa.fa-tachometer
+      '
+      'dashboard
+    li= link_to new_month_path do
+      .fa.fa-calendar-o
+      '
+      'new month

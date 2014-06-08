@@ -1,0 +1,37 @@
+.headline {
+  border-bottom: 1px solid $warm-gray;
+}
+
+#new-source-nav {
+  margin-bottom: 1em;
+  ul {
+    @include clearfix;
+  }
+  li {
+    float: left;
+    cursor: pointer;
+    text-decoration: underline;
+    color: $sea;
+    &.source-btn.cancel {
+      color: $red;
+      display: none;
+    }
+  }
+}
+
+.new-source-form {
+  display: none;
+  border: 1px solid $warmer-gray;
+  border-radius: 3px;
+  background: $warm-gray;
+  padding: 0.5em;
+  input#source_document {
+    color: $red;
+    font-weight: 300;
+  }
+}
+ .source-btn.cancel {
+  padding-left: 1em;
+  color: red;
+}
+
