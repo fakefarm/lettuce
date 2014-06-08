@@ -1,0 +1,10 @@
+#month-nav.month-nav
+  ul
+    li.title Month
+    li= link_to month_path(@month), method: :delete, data: { confirm: 'Are you sure?' } do
+      'delete
+      .fa.fa-trash-o
+    li= link_to month_path(@month, month: { status: 'archived' }), method: :put do
+      'archive
+      .fa.fa-archive
+
