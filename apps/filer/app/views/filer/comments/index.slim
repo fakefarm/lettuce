@@ -1,19 +1,14 @@
-h1 Listing comments
+h1 All comments
 table
   thead
     tr
-      th Body
-      th Source
-      th User
-      th colspan="3"
+      th Month
+      th Type
+      th Question
   tbody
     - @comments.each do |comment|
-      tr
-        td= comment.body
-        td= comment.source_id
-        td= comment.user_id
-        td= link_to 'Show', comment
-        td= link_to 'Edit', edit_comment_path(comment)
-        td= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' }
-br
-  = link_to 'New Comment', new_comment_path
+      - unless comment.source.nil?
+        tr
+          td= link_to month_name(comment), mo_path(comment)
+          td= comment.source.name
+          td= link_to comment.body, source_path(comment.source_id)
