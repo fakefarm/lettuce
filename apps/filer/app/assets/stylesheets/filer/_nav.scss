@@ -1,7 +1,15 @@
-nav ul li{
-  display: inline-block;
-  padding: 0 1em;
-  &:first-child {
-    padding-left: 0;
+.filer-nav {
+  padding: 1em 0;
+  ul {
+    text-align: right;
+    padding: 0;
+    margin: 0;
+  }
+  li{
+    display: inline-block;
+    padding: 0 1em;
+    &:last-child {
+      padding-right: 0;
+    }
   }
 }

@@ -1,6 +1,7 @@
 #new-source-nav
   ul
     li.source-btn#new-source-btn new file
+    li.source-btn.cancel#cancel-source-btn cancel
 .new-source-form#new-source-form
   = form_for(@source) do |f|
     - if @source.errors.any?
@@ -12,8 +13,9 @@
           - @source.errors.full_messages.each do |message|
             li= message
     = f.hidden_field :month_id, value: @month.id
-    .field
-      = f.file_field :document
+    .field.file-upload
+      = f.label :document, "Upload source document"
+      = f.file_field :document, class: 'upload-file'
     .field
       = f.label :name, "Describe this file"
       = f.text_field :name, placeholder: 'AMEX, or Bank File'
