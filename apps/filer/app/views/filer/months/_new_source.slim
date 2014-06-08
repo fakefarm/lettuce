@@ -20,7 +20,7 @@
       = f.label :name, "Describe this file"
       = f.text_field :name, placeholder: 'AMEX, or Bank File'
     .field
-      = f.label :note, 'comments or questions'
-      = f.text_field :note, placeholder: 'I bought a new car.'
+      = f.label :note, 'File type'
+      = f.select :note, [['(please select)', ''], ['source file', 'source file'], ['report', 'report'], ['invoice', 'invoice']]
     .actions
       = f.submit 'add file'

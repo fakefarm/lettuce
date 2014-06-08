@@ -26,15 +26,16 @@ module Filer
       @month = Month.new(month_params)
 
       if @month.save
-        redirect_to @month, notice: 'Month was successfully created.'
+        redirect_to @month, notice: "#{month_params[:name]} was successfully created."
       else
         render :new
       end
     end
 
     def update
+      # require 'pry'; binding.pry
       if @month.update(month_params)
-        redirect_to @month, notice: 'Month was successfully updated.'
+        redirect_to @month, notice: "Month was successfully #{month_params[:status]}."
       else
         render :edit
       end
@@ -51,7 +52,7 @@ module Filer
       end
 
       def month_params
-        params.require(:month).permit(:name)
+        params.require(:month).permit(:name, :status)
       end
   end
 end

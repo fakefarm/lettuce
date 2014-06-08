@@ -5,6 +5,9 @@ table
         td= link_to source.document.url do
           =source.document.model.name
           '
-          .fa.fa-file-o
-        td= source.note
-        td= link_to 'discuss this file', source_path(source)
+          .fa.fa-arrow-circle-o-down
+        td=source.note
+        td= link_to source_path(source) do
+          = comment_count(source)
+          '
+          .fa.fa-comment-o

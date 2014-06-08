@@ -2,6 +2,30 @@ body {
   margin: 0;
 }
 
+.month-nav {
+  text-align: right;
+  .title {
+    color: $sea;
+  }
+  li {
+    padding: 0 0.5em;
+    display: inline-block;
+    &:last-child {
+      padding-right: 0;
+    }
+    &:nth-child(2) { // make delete red
+      a:hover { color: $red; }
+    }
+
+  }
+  a {
+    color: $slate;
+    &:hover {
+      color: $sea;
+    }
+  }
+}
+
 .headline {
   border-bottom: 1px solid $warm-gray;
 }
