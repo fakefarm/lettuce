@@ -1,6 +1,6 @@
 // Typography
 ///////////////////////////////////////////////////////////////////////////////
-$sans-serif: 'lucida grande';
+$sans-serif: 'Source Code Pro', 'lucida grande';
 $serif: $georgia;
 
 $base-font-family: $sans-serif;
@@ -15,13 +15,20 @@ $base-border-radius: em(3);
 // Colors
 ///////////////////////////////////////////////////////////////////////////////
 
-$blue: #477DCA;
-$dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #DDD;
-$light-red: #FBE3E4;
-$light-yellow: #FFF6BF;
-$light-green: #E6EFC2;
+$blue:          #477DCA;
+$dark-gray:     #333;
+$medium-gray:   #999;
+$light-gray:    #DDD;
+$light-red:     #FBE3E4;
+$light-yellow:  #FFF6BF;
+$light-green:   #E6EFC2;
+$emerald:       #54906c;
+$grey:          #eff5f3;
+$slate:         #9ea2a1;
+$sea:           #054255;
+$sea-foam:      #054255;
+$sand:          #d5cbbf;
+
 
 // Body Color
 $base-body-color: white;

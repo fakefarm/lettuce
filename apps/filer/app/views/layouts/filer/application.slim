@@ -10,6 +10,8 @@ html
     meta name="viewport" content="initial-scale=1"
 
   body
-    .l-container.content
+    .l-container
       = render 'filer/nav'
-      = yield
+      .content
+        .inner-content
+          = yield
