@@ -1,0 +1,17 @@
+h1 All files
+table
+  thead
+    tr
+      th Month
+      th Document
+      th Type
+      th
+  tbody
+    - @sources.each do |source|
+      tr
+        td= link_to source.month.name, month_path(source.month)
+        td= link_to source.document.model.name, source.document.url
+        td= source.note
+        td= link_to 'Destroy', source, method: :delete, data: { confirm: 'Are you sure?' }
+
+= render 'new_source'
