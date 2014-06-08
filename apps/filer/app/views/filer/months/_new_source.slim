@@ -1,21 +1,24 @@
-= form_for(@source) do |f|
-  - if @source.errors.any?
-    #error_explanation
-      h2
-        = pluralize(@source.errors.count, "error")
-        | prohibited this source from being saved:
-      ul
-        - @source.errors.full_messages.each do |message|
-          li= message
-  = f.hidden_field :month_id, value: @month.id
-  .field
-    = f.file_field :document
-  .field
-    = f.label :name, "Describe this file"
-    = f.text_field :name, placeholder: 'AMEX, or Bank File'
-  .field
-    = f.label :note, 'comments or questions'
-    = f.text_field :note, placeholder: 'I bought a new car.'
-  .actions
-    = f.submit 'add file'
-
+#new-source-nav
+  ul
+    li.source-btn#new-source-btn new file
+.new-source-form#new-source-form
+  = form_for(@source) do |f|
+    - if @source.errors.any?
+      #error_explanation
+        h2
+          = pluralize(@source.errors.count, "error")
+          | prohibited this source from being saved:
+        ul
+          - @source.errors.full_messages.each do |message|
+            li= message
+    = f.hidden_field :month_id, value: @month.id
+    .field
+      = f.file_field :document
+    .field
+      = f.label :name, "Describe this file"
+      = f.text_field :name, placeholder: 'AMEX, or Bank File'
+    .field
+      = f.label :note, 'comments or questions'
+      = f.text_field :note, placeholder: 'I bought a new car.'
+    .actions
+      = f.submit 'add file'
