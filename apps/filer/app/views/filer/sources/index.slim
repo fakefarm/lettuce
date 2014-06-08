@@ -1,4 +1,4 @@
-h1 All files
+h1 Files
 table
   thead
     tr
@@ -12,6 +12,9 @@ table
         td= link_to source.month.name, month_path(source.month)
         td= link_to source.document.model.name, source.document.url
         td= source.note
-        td= link_to 'Destroy', source, method: :delete, data: { confirm: 'Are you sure?' }
+        td= link_to source, method: :delete, data: { confirm: 'Are you sure?' } do
+          'trash
+          '
+          .fa.fa-trash-o
 
 = render 'new_source'
