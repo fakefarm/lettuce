@@ -70,3 +70,12 @@ body {
   background: $sea;
   height: 28em;
 }
+
+
+// Source Docs
+.source-doc {
+  @include row;
+  .name { @include span-columns(6);}
+  .note { @include span-columns(4);}
+  .comments { @include span-columns(2);}
+}

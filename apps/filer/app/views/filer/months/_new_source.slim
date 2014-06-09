@@ -21,6 +21,6 @@
       = f.text_field :name, placeholder: 'AMEX, or Bank File'
     .field
       = f.label :note, 'File type'
-      = f.select :note, [['(please select)', ''], ['source file', 'source file'], ['report', 'report'], ['invoice', 'invoice']]
+      = f.select :note, file_types
     .actions
       = f.submit 'add file'
