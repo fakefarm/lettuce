@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140608131545) do
+ActiveRecord::Schema.define(version: 20140609115734) do
 
   create_table "filer_comments", force: true do |t|
     t.string   "body"
@@ -19,7 +19,12 @@ ActiveRecord::Schema.define(version: 20140608131545) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "status"
+    t.string   "dialog"
+    t.integer  "question_id"
   end
+
+  add_index "filer_comments", ["question_id"], name: "index_filer_comments_on_question_id"
 
   create_table "filer_months", force: true do |t|
     t.string   "name"
