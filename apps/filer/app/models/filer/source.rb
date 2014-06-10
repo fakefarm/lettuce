@@ -1,3 +1,5 @@
+require_dependency "filer/document_uploader"
+
 module Filer
   class Source < ActiveRecord::Base
     mount_uploader :document, DocumentUploader
