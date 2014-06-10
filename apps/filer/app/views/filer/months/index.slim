@@ -1,4 +1,8 @@
-h1 Overview
-ul
-  - @months.each do |month|
-    li= link_to "#{month.name}, #{month.created_at.strftime('%Y')}", month
+h1.headline Months
+
+table
+  tbody
+    - @months.each do |month|
+      tr
+        td= link_to "#{month.name}, #{month.created_at.strftime('%Y')}", month
+        td= month.status

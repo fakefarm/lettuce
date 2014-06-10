@@ -7,6 +7,7 @@ module Filer
 
     def index
       @sources = Source.all
+      @source = Source.new
     end
 
     def show
@@ -26,7 +27,7 @@ module Filer
       if @source.save
         redirect_to month_path(@source.month_id), notice: 'Source was successfully created.'
       else
-        render :new
+        redirect_to :back
       end
     end
 

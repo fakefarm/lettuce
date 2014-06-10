@@ -1,0 +1,15 @@
+/ How do I use the path helpers? I want to get to months_index, but none of the following work;
+/ months_path
+/ main_app.months_path
+/ Filer::Month.months_path
+/ How do I get devise path helpers to work?
+ul
+  - if user_signed_in?
+    li= link_to 'sign out', '/users/sign_out'
+  - else
+    li= link_to 'sign up', '/dashboard'
+    li= link_to 'sign in', '/dashboard'
+
+  li= link_to 'dashboard', '/dashboard'
+  li=link_to 'http://www.twitter.com/lettucebooks', target: '_blank' do
+      .fa.fa-twitter-square

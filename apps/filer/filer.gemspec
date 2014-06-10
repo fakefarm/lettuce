@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'bourbon'
   s.add_dependency 'bitters'
   s.add_dependency 'refills'
+  s.add_dependency 'jquery-rails'
 
   s.add_development_dependency "sqlite3"
-  s.add_development_dependency "pry-rails"
 end

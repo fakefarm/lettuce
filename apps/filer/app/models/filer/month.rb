@@ -1,6 +1,5 @@
 module Filer
   class Month < ActiveRecord::Base
-    mount_uploader :document, DocumentUploader
-    has_many :sources
+    has_many :sources, dependent: :destroy
   end
 end

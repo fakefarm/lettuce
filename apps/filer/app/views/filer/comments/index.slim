@@ -1,0 +1,14 @@
+h1 Comments
+table
+  thead
+    tr
+      th Month
+      th Type
+      th Question
+  tbody
+    - @comments.each do |comment|
+      - unless comment.source.nil?
+        tr
+          td= link_to month_name(comment), mo_path(comment)
+          td= comment.source.name
+          td= link_to comment.body, source_path(comment.source_id)

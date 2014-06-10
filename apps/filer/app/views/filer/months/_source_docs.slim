@@ -1,7 +1,15 @@
-table
-  tbody
-    - @sources.each do |source|
-      tr
-        td= link_to source.document.model.name, source.document.url
-        td= source.note
-        td= link_to 'discuss this file', source_path(source)
+
+- @sources.each do |source|
+  .source-doc
+    .name
+      = link_to source.document.url do
+        =source.document.model.name
+        '
+        .fa.fa-arrow-circle-o-down
+    .note
+      =source.note
+    .comments
+      = link_to source_path(source) do
+        = comment_count(source)
+        '
+        .fa.fa-comment-o

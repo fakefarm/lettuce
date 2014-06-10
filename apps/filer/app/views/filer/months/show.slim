@@ -1,6 +1,7 @@
-p id="notice"= notice
-
-h1= @month.name
+#notice= notice
+= render 'month_nav'
+h1.headline= @month.name
+p= @month.status
 
 = render 'source_docs'
 = render 'new_source'
