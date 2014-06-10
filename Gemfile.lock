@@ -23,6 +23,18 @@ PATH
       refills
       slim
 
+PATH
+  remote: apps/people
+  specs:
+    people (0.0.1)
+      bitters
+      bourbon
+      devise
+      neat
+      rails (~> 4.1.0)
+      refills
+      slim
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -53,6 +65,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    bcrypt (3.1.7)
     bitters (0.9.5)
       bourbon (>= 3.1)
       sass (>= 3.2)
@@ -74,6 +87,12 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    devise (3.2.4)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     dotenv (0.11.1)
       dotenv-deployment (~> 0.0.2)
     dotenv-deployment (0.0.2)
@@ -116,6 +135,7 @@ GEM
       net-ssh (>= 1.99.1)
     net-ssh (2.9.1)
     nokogiri (1.5.11)
+    orm_adapter (0.5.0)
     pg (0.17.1)
     polyglot (0.3.5)
     pry (0.9.12.6)
@@ -192,6 +212,8 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    warden (1.2.3)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
@@ -207,6 +229,7 @@ DEPENDENCIES
   jquery-rails
   marketing!
   neat
+  people!
   pg
   pry-rails
   quiet_assets

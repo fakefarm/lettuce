@@ -8,6 +8,7 @@ gem 'quiet_assets', :group => :development
 
 gem 'filer', path: "apps/filer"
 gem 'marketing', path: "apps/marketing"
+gem 'people', path: "apps/people"
 
 gem 'bourbon'
 gem 'neat'
