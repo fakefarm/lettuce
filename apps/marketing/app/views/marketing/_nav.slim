@@ -3,7 +3,10 @@
 / main_app.months_path
 / Filer::Month.months_path
 ul
-  li= link_to 'dashboard', '/dashboard'
+  - if signed_in?
+    li= link_to 'dashboard', '/dashboard'
+  -else
+    li= link_to 'sign in', new_user_session_path
   li=link_to 'http://www.twitter.com/lettucebooks', target: '_blank' do
       .fa.fa-twitter-square
 
