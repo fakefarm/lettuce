@@ -16,5 +16,6 @@
 /tmp
 
 .env
+.ruby-version
 
 todo
