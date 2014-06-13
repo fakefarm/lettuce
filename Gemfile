@@ -7,8 +7,8 @@ gem 'pry-rails', :group => :development
 gem 'quiet_assets', :group => :development
 
 gem 'filer', path: "apps/filer"
-gem 'people', path: "apps/people"
 gem 'marketing', path: "apps/marketing"
+gem 'people', path: "apps/people"
 
 gem 'bourbon'
 gem 'neat'
@@ -32,6 +32,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
+gem 'modernizr-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

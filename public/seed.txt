@@ -1,0 +1,2 @@
+this is for seeding.
+/public/seed.txt
