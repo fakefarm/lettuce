@@ -18,6 +18,7 @@ PATH
     marketing (0.0.1)
       bitters
       bourbon
+      jquery-rails
       neat
       rails (~> 4.1.0)
       refills
@@ -30,6 +31,7 @@ PATH
       bitters
       bourbon
       devise
+      jquery-rails
       neat
       rails (~> 4.1.0)
       refills

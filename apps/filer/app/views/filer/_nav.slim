@@ -1,5 +1,7 @@
 nav.filer-nav
   ul
+    - if user_signed_in?
+      li= "Hi, #{current_user.email}"
     li= link_to months_path do
       'months
       '

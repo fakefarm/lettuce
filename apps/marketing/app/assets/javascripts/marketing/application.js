@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery_ujs
 //= require wow.min
 //= require jquery.fittext
 //= require_tree .
