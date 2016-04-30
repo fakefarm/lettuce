@@ -37,19 +37,6 @@ ActiveRecord::Schema.define(version: 20160430051448) do
   add_index "books", ["family_id"], name: "index_books_on_family_id"
   add_index "books", ["user_id"], name: "index_books_on_user_id"
 
-  create_table "budget_items", force: :cascade do |t|
-    t.string   "name"
-    t.string   "frequency"
-    t.integer  "target_price"
-    t.string   "category_id"
-    t.string   "structure"
-    t.string   "reminder_id"
-    t.integer  "user_id"
-    t.integer  "family_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
   create_table "contacts", force: :cascade do |t|
     t.integer  "note_id"
     t.string   "name"
@@ -62,6 +49,22 @@ ActiveRecord::Schema.define(version: 20160430051448) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "expenses", force: :cascade do |t|
+    t.string   "name"
+    t.string   "frequency"
+    t.integer  "target_price"
+    t.integer  "category_id"
+    t.string   "structure"
+    t.string   "reminder_id"
+    t.integer  "user_id"
+    t.integer  "family_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "expenses", ["family_id"], name: "index_expenses_on_family_id"
+  add_index "expenses", ["user_id"], name: "index_expenses_on_user_id"
 
   create_table "liabilities", force: :cascade do |t|
     t.string   "starting_balance"

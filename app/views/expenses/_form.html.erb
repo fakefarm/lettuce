@@ -1,10 +1,10 @@
-<%= form_for(@budget_item) do |f| %>
-  <% if @budget_item.errors.any? %>
+<%= form_for(@expense) do |f| %>
+  <% if @expense.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@budget_item.errors.count, "error") %> prohibited this budget_item from being saved:</h2>
+      <h2><%= pluralize(@expense.errors.count, "error") %> prohibited this expense from being saved:</h2>
 
       <ul>
-      <% @budget_item.errors.full_messages.each do |message| %>
+      <% @expense.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -25,23 +25,11 @@
   </div>
   <div class="field">
     <%= f.label :category_id %><br>
-    <%= f.text_field :category_id %>
+    <%= collection_select( :category, :id, Book.all, :id, :name, {} ) -%>
   </div>
   <div class="field">
     <%= f.label :structure %><br>
     <%= f.text_field :structure %>
-  </div>
-  <div class="field">
-    <%= f.label :reminder_id %><br>
-    <%= f.text_field :reminder_id %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :family_id %><br>
-    <%= f.text_field :family_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

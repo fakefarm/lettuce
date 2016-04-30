@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @expense.name %>
+</p>
+
+<p>
+  <strong>Frequency:</strong>
+  <%= @expense.frequency %>
+</p>
+
+<p>
+  <strong>Target price:</strong>
+  <%= @expense.target_price %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @expense.category_id %>
+</p>
+
+<p>
+  <strong>Structure:</strong>
+  <%= @expense.structure %>
+</p>
+
+<p>
+  <strong>Reminder:</strong>
+  <%= @expense.reminder_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @expense.user_id %>
+</p>
+
+<p>
+  <strong>Family:</strong>
+  <%= @expense.family_id %>
+</p>
+
+<%= link_to 'Edit', edit_expense_path(@expense) %> |
+<%= link_to 'Back', expenses_path %>
