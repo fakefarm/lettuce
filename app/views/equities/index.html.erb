@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Equities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Starting balance</th>
+      <th>Nickname</th>
+      <th>Bank name</th>
+      <th>User</th>
+      <th>Family</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @equities.each do |equity| %>
+      <tr>
+        <td><%= equity.starting_balance %></td>
+        <td><%= equity.nickname %></td>
+        <td><%= equity.bank_name %></td>
+        <td><%= equity.user_id %></td>
+        <td><%= equity.family_id %></td>
+        <td><%= link_to 'Show', equity %></td>
+        <td><%= link_to 'Edit', edit_equity_path(equity) %></td>
+        <td><%= link_to 'Destroy', equity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Equity', new_equity_path %>

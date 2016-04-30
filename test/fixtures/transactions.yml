@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  account_id: 1
+  equity_id: 1
   vendor_id: 1
   amount: 1
   book_id: 1
@@ -13,7 +13,7 @@ one:
   family_id: 1
 
 two:
-  account_id: 1
+  equity_id: 1
   vendor_id: 1
   amount: 1
   book_id: 1

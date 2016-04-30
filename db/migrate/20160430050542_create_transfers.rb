@@ -1,7 +1,7 @@
 class CreateTransfers < ActiveRecord::Migration
   def change
     create_table :transfers do |t|
-      t.integer :account_id
+      t.integer :equity_id
       t.integer :liability_id
       t.string :amount
       t.integer :note_id

@@ -5,7 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Account</th>
+      <th>Equity</th>
       <th>Vendor</th>
       <th>Amount</th>
       <th>Book</th>
@@ -22,7 +22,7 @@
   <tbody>
     <% @transactions.each do |transaction| %>
       <tr>
-        <td><%= transaction.account_id %></td>
+        <td><%= transaction.equity_id %></td>
         <td><%= transaction.vendor_id %></td>
         <td><%= transaction.amount %></td>
         <td><%= transaction.book_id %></td>

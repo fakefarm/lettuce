@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Starting balance:</strong>
+  <%= @equity.starting_balance %>
+</p>
+
+<p>
+  <strong>Nickname:</strong>
+  <%= @equity.nickname %>
+</p>
+
+<p>
+  <strong>Bank name:</strong>
+  <%= @equity.bank_name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @equity.user_id %>
+</p>
+
+<p>
+  <strong>Family:</strong>
+  <%= @equity.family_id %>
+</p>
+
+<%= link_to 'Edit', edit_equity_path(@equity) %> |
+<%= link_to 'Back', equities_path %>

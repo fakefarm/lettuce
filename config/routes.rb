@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :tasks
   resources :transfers
   resources :transactions
-  resources :accounts
+  resources :equities
   resources :books
   resources :expenses
   # The priority is based upon order of creation: first created -> highest priority.

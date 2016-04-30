@@ -5,7 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Account</th>
+      <th>Equity</th>
       <th>Liability</th>
       <th>Amount</th>
       <th>Note</th>
@@ -20,7 +20,7 @@
   <tbody>
     <% @transfers.each do |transfer| %>
       <tr>
-        <td><%= transfer.account_id %></td>
+        <td><%= transfer.equity_id %></td>
         <td><%= transfer.liability_id %></td>
         <td><%= transfer.amount %></td>
         <td><%= transfer.note_id %></td>
