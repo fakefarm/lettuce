@@ -18,7 +18,7 @@ class ContactsControllerTest < ActionController::TestCase
 
   test "should create contact" do
     assert_difference('Contact.count') do
-      post :create, contact: { archive: @contact.archive, email: @contact.email, family_id: @contact.family_id, name: @contact.name, note_id: @contact.note_id, phone: @contact.phone, user_id: @contact.user_id, website: @contact.website }
+      post :create, contact: { archive: @contact.archive, email: @contact.email, family_id: @contact.family_id, name: @contact.name, phone: @contact.phone, user_id: @contact.user_id, website: @contact.website }
     end
 
     assert_redirected_to contact_path(assigns(:contact))
@@ -35,7 +35,7 @@ class ContactsControllerTest < ActionController::TestCase
   end
 
   test "should update contact" do
-    patch :update, id: @contact, contact: { archive: @contact.archive, email: @contact.email, family_id: @contact.family_id, name: @contact.name, note_id: @contact.note_id, phone: @contact.phone, user_id: @contact.user_id, website: @contact.website }
+    patch :update, id: @contact, contact: { archive: @contact.archive, email: @contact.email, family_id: @contact.family_id, name: @contact.name, phone: @contact.phone, user_id: @contact.user_id, website: @contact.website }
     assert_redirected_to contact_path(assigns(:contact))
   end
 

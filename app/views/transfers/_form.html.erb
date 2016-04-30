@@ -13,35 +13,15 @@
 
   <div class="field">
     <%= f.label :equity_id %><br>
-    <%= f.number_field :equity_id %>
+    <%= collection_select( :equity, :equity_id, Equity.all, :id, :nickname, {} ) -%>
   </div>
   <div class="field">
     <%= f.label :liability_id %><br>
-    <%= f.number_field :liability_id %>
+    <%= collection_select( :equity, :liability_id, Liability.all, :id, :nickname, {} ) -%>
   </div>
   <div class="field">
     <%= f.label :amount %><br>
     <%= f.text_field :amount %>
-  </div>
-  <div class="field">
-    <%= f.label :note_id %><br>
-    <%= f.number_field :note_id %>
-  </div>
-  <div class="field">
-    <%= f.label :task_id %><br>
-    <%= f.number_field :task_id %>
-  </div>
-  <div class="field">
-    <%= f.label :reminder_id %><br>
-    <%= f.number_field :reminder_id %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :family_id %><br>
-    <%= f.number_field :family_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

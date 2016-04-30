@@ -5,13 +5,29 @@
       <li><%= link_to 'book', new_book_path %></li>
       <li><%= link_to 'expense', new_expense_path %></li>
       <li><%= link_to 'equity', new_equity_path %></li>
-      <li><%= link_to 'liability', '' %></li>
-      <li><%= link_to 'note', '' %></li>
-      <li><%= link_to 'contact', '' %></li>
-      <li><%= link_to 'task', '' %></li>
-      <li><%= link_to 'transaction', '' %></li>
-      <li><%= link_to 'transfer', '' %></li>
-      <li><%= link_to 'vendor', '' %></li>
+      <li><%= link_to 'liability', new_liability_path %></li>
+      <li><%= link_to 'note', new_note_path %></li>
+      <li><%= link_to 'contact', new_contact_path %></li>
+      <li><%= link_to 'task', new_task_path %></li>
+      <li><%= link_to 'transaction', new_transaction_path %></li>
+      <li><%= link_to 'transfer', new_transfer_path %></li>
+      <li><%= link_to 'vendor', new_vendor_path %></li>
     </ul>
   </nav>
+  <nav class='all-items'>
+    <h2>view all</h2>
+    <ul>
+      <li><%= link_to 'book', books_path %></li>
+      <li><%= link_to 'expense', expenses_path %></li>
+      <li><%= link_to 'equity', equities_path %></li>
+      <li><%= link_to 'liability', liabilities_path %></li>
+      <li><%= link_to 'note', notes_path %></li>
+      <li><%= link_to 'contact', contacts_path %></li>
+      <li><%= link_to 'task', tasks_path %></li>
+      <li><%= link_to 'transaction', transactions_path %></li>
+      <li><%= link_to 'transfer', transfers_path %></li>
+      <li><%= link_to 'vendor', vendors_path %></li>
+    </ul>
+  </nav>
+
 </header>

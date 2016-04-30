@@ -18,7 +18,7 @@ class TransactionsControllerTest < ActionController::TestCase
 
   test "should create transaction" do
     assert_difference('Transaction.count') do
-      post :create, transaction: { equity_id: @transaction.equity_id, amount: @transaction.amount, book_id: @transaction.book_id, comment: @transaction.comment, family_id: @transaction.family_id, flag_id: @transaction.flag_id, note_id: @transaction.note_id, task_id: @transaction.task_id, user_id: @transaction.user_id, vendor_id: @transaction.vendor_id }
+      post :create, transaction: { equity_id: @transaction.equity_id, amount: @transaction.amount, book_id: @transaction.book_id, comment: @transaction.comment, family_id: @transaction.family_id, user_id: @transaction.user_id, vendor_id: @transaction.vendor_id }
     end
 
     assert_redirected_to transaction_path(assigns(:transaction))
@@ -35,7 +35,7 @@ class TransactionsControllerTest < ActionController::TestCase
   end
 
   test "should update transaction" do
-    patch :update, id: @transaction, transaction: { equity_id: @transaction.equity_id, amount: @transaction.amount, book_id: @transaction.book_id, comment: @transaction.comment, family_id: @transaction.family_id, flag_id: @transaction.flag_id, note_id: @transaction.note_id, task_id: @transaction.task_id, user_id: @transaction.user_id, vendor_id: @transaction.vendor_id }
+    patch :update, id: @transaction, transaction: { equity_id: @transaction.equity_id, amount: @transaction.amount, book_id: @transaction.book_id, comment: @transaction.comment, family_id: @transaction.family_id, user_id: @transaction.user_id, vendor_id: @transaction.vendor_id }
     assert_redirected_to transaction_path(assigns(:transaction))
   end
 
