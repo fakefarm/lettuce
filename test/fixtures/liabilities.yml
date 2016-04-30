@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  starting_balance: MyString
+  interest_rate: 1
+  nickname: MyString
+  bank_name: MyString
+  user_id: 1
+  family_id: 1
+
+two:
+  starting_balance: MyString
+  interest_rate: 1
+  nickname: MyString
+  bank_name: MyString
+  user_id: 1
+  family_id: 1

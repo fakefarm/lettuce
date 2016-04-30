@@ -11,53 +11,120 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140609115734) do
+ActiveRecord::Schema.define(version: 20160430051448) do
 
-  create_table "filer_comments", force: true do |t|
-    t.string   "body"
-    t.integer  "source_id"
+  create_table "accounts", force: :cascade do |t|
+    t.integer  "starting_balance"
+    t.string   "nickname"
+    t.string   "bank_name"
     t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "status"
-    t.string   "dialog"
-    t.integer  "question_id"
+    t.integer  "family_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
-  add_index "filer_comments", ["question_id"], name: "index_filer_comments_on_question_id"
-
-  create_table "filer_months", force: true do |t|
+  create_table "budget_cateogries", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "status"
+    t.string   "tag"
+    t.text     "note"
+    t.integer  "user_id"
+    t.integer  "family_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "filer_sources", force: true do |t|
+  create_table "budget_items", force: :cascade do |t|
     t.string   "name"
-    t.string   "note"
-    t.string   "document"
-    t.integer  "month_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "frequency"
+    t.integer  "target_price"
+    t.string   "category_id"
+    t.string   "structure"
+    t.string   "reminder_id"
+    t.integer  "user_id"
+    t.integer  "family_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
-  create_table "people_users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "contacts", force: :cascade do |t|
+    t.integer  "note_id"
+    t.string   "name"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "website"
+    t.boolean  "archive"
+    t.integer  "user_id"
+    t.integer  "family_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  add_index "people_users", ["email"], name: "index_people_users_on_email", unique: true
-  add_index "people_users", ["reset_password_token"], name: "index_people_users_on_reset_password_token", unique: true
+  create_table "liabilities", force: :cascade do |t|
+    t.string   "starting_balance"
+    t.integer  "interest_rate"
+    t.string   "nickname"
+    t.string   "bank_name"
+    t.integer  "user_id"
+    t.integer  "family_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "notes", force: :cascade do |t|
+    t.string   "body"
+    t.boolean  "archive"
+    t.integer  "user_id"
+    t.integer  "family_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.string   "title"
+    t.boolean  "complete"
+    t.boolean  "archive"
+    t.integer  "user_id"
+    t.integer  "family_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.integer  "account_id"
+    t.integer  "vendor_id"
+    t.integer  "amount"
+    t.integer  "category_id"
+    t.integer  "flag_id"
+    t.integer  "note_id"
+    t.integer  "task_id"
+    t.string   "comment"
+    t.integer  "user_id"
+    t.integer  "family_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "transfers", force: :cascade do |t|
+    t.integer  "account_id"
+    t.integer  "liability_id"
+    t.string   "amount"
+    t.integer  "note_id"
+    t.integer  "task_id"
+    t.integer  "reminder_id"
+    t.integer  "user_id"
+    t.integer  "family_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "vendors", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "contact_id"
+    t.boolean  "archive"
+    t.integer  "user_id"
+    t.integer  "family_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

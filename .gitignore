@@ -25,3 +25,6 @@ apps/**/vendor/*
 .ruby-version
 
 todo
+
+
+.DS_Store

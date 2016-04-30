@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @budget_cateogry.name %>
+</p>
+
+<p>
+  <strong>Tag:</strong>
+  <%= @budget_cateogry.tag %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @budget_cateogry.note %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @budget_cateogry.user_id %>
+</p>
+
+<p>
+  <strong>Family:</strong>
+  <%= @budget_cateogry.family_id %>
+</p>
+
+<%= link_to 'Edit', edit_budget_cateogry_path(@budget_cateogry) %> |
+<%= link_to 'Back', budget_cateogries_path %>

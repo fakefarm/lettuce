@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  frequency: MyString
+  target_price: 1
+  category_id: MyString
+  structure: MyString
+  reminder_id: MyString
+  user_id: MyString
+  family_id: MyString
+
+two:
+  name: MyString
+  frequency: MyString
+  target_price: 1
+  category_id: MyString
+  structure: MyString
+  reminder_id: MyString
+  user_id: MyString
+  family_id: MyString

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @budget_item.name %>
+</p>
+
+<p>
+  <strong>Frequency:</strong>
+  <%= @budget_item.frequency %>
+</p>
+
+<p>
+  <strong>Target price:</strong>
+  <%= @budget_item.target_price %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @budget_item.category_id %>
+</p>
+
+<p>
+  <strong>Structure:</strong>
+  <%= @budget_item.structure %>
+</p>
+
+<p>
+  <strong>Reminder:</strong>
+  <%= @budget_item.reminder_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @budget_item.user_id %>
+</p>
+
+<p>
+  <strong>Family:</strong>
+  <%= @budget_item.family_id %>
+</p>
+
+<%= link_to 'Edit', edit_budget_item_path(@budget_item) %> |
+<%= link_to 'Back', budget_items_path %>

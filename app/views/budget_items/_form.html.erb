@@ -1,0 +1,49 @@
+<%= form_for(@budget_item) do |f| %>
+  <% if @budget_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@budget_item.errors.count, "error") %> prohibited this budget_item from being saved:</h2>
+
+      <ul>
+      <% @budget_item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :frequency %><br>
+    <%= f.text_field :frequency %>
+  </div>
+  <div class="field">
+    <%= f.label :target_price %><br>
+    <%= f.number_field :target_price %>
+  </div>
+  <div class="field">
+    <%= f.label :category_id %><br>
+    <%= f.text_field :category_id %>
+  </div>
+  <div class="field">
+    <%= f.label :structure %><br>
+    <%= f.text_field :structure %>
+  </div>
+  <div class="field">
+    <%= f.label :reminder_id %><br>
+    <%= f.text_field :reminder_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :family_id %><br>
+    <%= f.text_field :family_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
