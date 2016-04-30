@@ -1,0 +1,47 @@
+<%= form_for(@book) do |f| %>
+  <% if @book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@book.errors.count, "error") %> prohibited this budget_cateogry from being saved:</h2>
+
+      <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <h2>name of book</h2>
+  <p>
+    A book is the collection of similar transactions. Examples include 'home repair', 'auto repair', 'gardening'
+  </p>
+  <p>
+    A book is not something you owe (<%= link_to 'new liability', new_liability_path %>), or own (<%=  link_to 'new equity' %>).
+  </p>
+
+  <div class="field">
+    <%= f.text_field :name %>
+  </div>
+
+  <h2>attention</h2>
+
+  <div class="field">
+    <%= f.label "level of automation - 'high' or 'low' " %><br>
+    <p>
+      Helps get a sense of how often this book should be reviewed.
+    </p>
+    <%= f.text_field :tag %>
+  </div>
+
+  <h2>comments</h2>
+  <div class="field">
+    <%= f.label :note %><br>
+    <p>
+      Explain some of the types of activities that will be paid for through this book.
+    </p>
+    <%= f.text_area :note %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

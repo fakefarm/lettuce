@@ -23,15 +23,19 @@ ActiveRecord::Schema.define(version: 20160430051448) do
     t.datetime "updated_at",       null: false
   end
 
-  create_table "budget_cateogries", force: :cascade do |t|
+  create_table "books", force: :cascade do |t|
     t.string   "name"
     t.string   "tag"
     t.text     "note"
+    t.boolean  "archive"
     t.integer  "user_id"
     t.integer  "family_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "books", ["family_id"], name: "index_books_on_family_id"
+  add_index "books", ["user_id"], name: "index_books_on_user_id"
 
   create_table "budget_items", force: :cascade do |t|
     t.string   "name"

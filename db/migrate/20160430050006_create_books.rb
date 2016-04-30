@@ -1,11 +1,16 @@
-class CreateBudgetCateogries < ActiveRecord::Migration
+class CreateBooks < ActiveRecord::Migration
   def change
-    create_table :budget_cateogries do |t|
+    create_table :books do |t|
       t.string :name
       t.string :tag
       t.text :note
+      t.boolean :archive
       t.integer :user_id
       t.integer :family_id
+
+      t.index :user_id
+      t.index :family_id
+
 
       t.timestamps null: false
     end

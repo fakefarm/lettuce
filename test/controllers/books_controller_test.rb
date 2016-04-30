@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class BudgetCateogriesControllerTest < ActionController::TestCase
+class BooksControllerTest < ActionController::TestCase
   setup do
     @budget_cateogry = budget_cateogries(:one)
   end
@@ -17,7 +17,7 @@ class BudgetCateogriesControllerTest < ActionController::TestCase
   end
 
   test "should create budget_cateogry" do
-    assert_difference('BudgetCateogry.count') do
+    assert_difference('Book.count') do
       post :create, budget_cateogry: { family_id: @budget_cateogry.family_id, name: @budget_cateogry.name, note: @budget_cateogry.note, tag: @budget_cateogry.tag, user_id: @budget_cateogry.user_id }
     end
 
@@ -40,7 +40,7 @@ class BudgetCateogriesControllerTest < ActionController::TestCase
   end
 
   test "should destroy budget_cateogry" do
-    assert_difference('BudgetCateogry.count', -1) do
+    assert_difference('Book.count', -1) do
       delete :destroy, id: @budget_cateogry
     end
 

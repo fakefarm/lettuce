@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :transfers
   resources :transactions
   resources :accounts
-  resources :budget_cateogries
+  resources :books
   resources :budget_items
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
