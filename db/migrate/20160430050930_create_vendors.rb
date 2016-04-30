@@ -4,8 +4,10 @@ class CreateVendors < ActiveRecord::Migration
       t.string :name
       t.integer :contact_id
       t.boolean :archive
+
       t.integer :user_id
       t.integer :family_id
+      t.boolean :flag
 
       t.index :user_id
       t.index :family_id

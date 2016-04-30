@@ -5,12 +5,11 @@ class CreateTransactions < ActiveRecord::Migration
       t.integer :vendor_id
       t.integer :amount
       t.integer :book_id
-      t.integer :flag_id
-      t.integer :note_id
-      t.integer :task_id
       t.string :comment
+
       t.integer :user_id
       t.integer :family_id
+      t.boolean :flag
 
       t.index :user_id
       t.index :family_id

@@ -3,23 +3,9 @@
 one:
   equity_id: 1
   vendor_id: 1
-  amount: 1
+  amount: 34
   book_id: 1
-  flag_id: 1
-  note_id: 1
-  task_id: 1
-  comment: MyString
+  comment: this comment intentionally left blank
   user_id: 1
   family_id: 1
-
-two:
-  equity_id: 1
-  vendor_id: 1
-  amount: 1
-  book_id: 1
-  flag_id: 1
-  note_id: 1
-  task_id: 1
-  comment: MyString
-  user_id: 1
-  family_id: 1
+  flag: false

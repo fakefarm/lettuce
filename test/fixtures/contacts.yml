@@ -1,21 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  note_id: 1
-  name: MyString
-  phone: MyString
-  email: MyString
-  website: MyString
+  name: Taco Mac
+  phone: 404-123-2345
+  email: taco@mac.me
+  website: tacomac.com
   archive: false
   user_id: 1
   family_id: 1
+  flag: false
 
 two:
-  note_id: 1
-  name: MyString
-  phone: MyString
-  email: MyString
-  website: MyString
+  name: SDbullion
+  phone: 404-123-2345
+  email: silver@sdbullion.com
+  website: sdbullion.com
   archive: false
   user_id: 1
   family_id: 1
+  flag: false

@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20160430051448) do
     t.boolean  "archive"
     t.integer  "user_id"
     t.integer  "family_id"
+    t.boolean  "flag"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -28,7 +29,6 @@ ActiveRecord::Schema.define(version: 20160430051448) do
   add_index "books", ["user_id"], name: "index_books_on_user_id"
 
   create_table "contacts", force: :cascade do |t|
-    t.integer  "note_id"
     t.string   "name"
     t.string   "phone"
     t.string   "email"
@@ -36,9 +36,13 @@ ActiveRecord::Schema.define(version: 20160430051448) do
     t.boolean  "archive"
     t.integer  "user_id"
     t.integer  "family_id"
+    t.boolean  "flag"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "contacts", ["family_id"], name: "index_contacts_on_family_id"
+  add_index "contacts", ["user_id"], name: "index_contacts_on_user_id"
 
   create_table "equities", force: :cascade do |t|
     t.integer  "starting_balance"
@@ -46,6 +50,7 @@ ActiveRecord::Schema.define(version: 20160430051448) do
     t.string   "bank_name"
     t.integer  "user_id"
     t.integer  "family_id"
+    t.boolean  "flag"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
@@ -56,13 +61,13 @@ ActiveRecord::Schema.define(version: 20160430051448) do
   create_table "expenses", force: :cascade do |t|
     t.string   "name"
     t.string   "frequency"
+    t.string   "structure"
     t.integer  "target_price"
     t.boolean  "archive"
     t.integer  "book_id"
-    t.string   "structure"
-    t.string   "reminder_id"
     t.integer  "user_id"
     t.integer  "family_id"
+    t.boolean  "flag"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
@@ -72,62 +77,95 @@ ActiveRecord::Schema.define(version: 20160430051448) do
   add_index "expenses", ["user_id"], name: "index_expenses_on_user_id"
 
   create_table "liabilities", force: :cascade do |t|
-    t.string   "starting_balance"
-    t.integer  "interest_rate"
+    t.integer  "starting_balance"
+    t.string   "interest_rate"
     t.string   "nickname"
     t.string   "bank_name"
+    t.boolean  "archive"
+    t.integer  "current_balance"
     t.integer  "user_id"
     t.integer  "family_id"
+    t.boolean  "flag"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
 
+  add_index "liabilities", ["family_id"], name: "index_liabilities_on_family_id"
+  add_index "liabilities", ["user_id"], name: "index_liabilities_on_user_id"
+
   create_table "notes", force: :cascade do |t|
     t.string   "body"
     t.boolean  "archive"
+    t.integer  "expense_id"
+    t.integer  "book_id"
+    t.integer  "equity_id"
+    t.integer  "transaction_id"
+    t.integer  "transfer_id"
+    t.integer  "vendor_id"
+    t.integer  "contact_id"
+    t.integer  "liability_id"
     t.integer  "user_id"
     t.integer  "family_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "flag"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
+
+  add_index "notes", ["family_id"], name: "index_notes_on_family_id"
+  add_index "notes", ["user_id"], name: "index_notes_on_user_id"
 
   create_table "tasks", force: :cascade do |t|
     t.string   "title"
     t.boolean  "complete"
     t.boolean  "archive"
+    t.integer  "expense_id"
+    t.integer  "book_id"
+    t.integer  "equity_id"
+    t.integer  "transaction_id"
+    t.integer  "transfer_id"
+    t.integer  "vendor_id"
+    t.integer  "contact_id"
+    t.integer  "liability_id"
     t.integer  "user_id"
     t.integer  "family_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "flag"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
+
+  add_index "tasks", ["family_id"], name: "index_tasks_on_family_id"
+  add_index "tasks", ["user_id"], name: "index_tasks_on_user_id"
 
   create_table "transactions", force: :cascade do |t|
     t.integer  "equity_id"
     t.integer  "vendor_id"
     t.integer  "amount"
     t.integer  "book_id"
-    t.integer  "flag_id"
-    t.integer  "note_id"
-    t.integer  "task_id"
     t.string   "comment"
     t.integer  "user_id"
     t.integer  "family_id"
+    t.boolean  "flag"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_index "transactions", ["family_id"], name: "index_transactions_on_family_id"
+  add_index "transactions", ["user_id"], name: "index_transactions_on_user_id"
+
   create_table "transfers", force: :cascade do |t|
     t.integer  "equity_id"
     t.integer  "liability_id"
-    t.string   "amount"
-    t.integer  "note_id"
-    t.integer  "task_id"
-    t.integer  "reminder_id"
+    t.integer  "amount"
+    t.boolean  "archive"
     t.integer  "user_id"
     t.integer  "family_id"
+    t.boolean  "flag"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
+
+  add_index "transfers", ["family_id"], name: "index_transfers_on_family_id"
+  add_index "transfers", ["user_id"], name: "index_transfers_on_user_id"
 
   create_table "vendors", force: :cascade do |t|
     t.string   "name"
@@ -135,8 +173,12 @@ ActiveRecord::Schema.define(version: 20160430051448) do
     t.boolean  "archive"
     t.integer  "user_id"
     t.integer  "family_id"
+    t.boolean  "flag"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "vendors", ["family_id"], name: "index_vendors_on_family_id"
+  add_index "vendors", ["user_id"], name: "index_vendors_on_user_id"
 
 end

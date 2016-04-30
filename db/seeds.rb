@@ -13,8 +13,8 @@ Book.create(name: 'fun', tag: 'high', note: 'i like to party and so do those aro
 
 Expense.destroy_all
 
-Expense.create(name: "Taco Bell", frequency: "Weekly", target_price: 10, book_id: 1, structure: "variable", reminder_id: 1, user_id: 1, family_id: 1)
-Expense.create(name: "Taco Party", frequency: "Weekly", target_price: 100, book_id: 2, structure: "variable", reminder_id: 1, user_id: 1, family_id: 1)
+Expense.create(name: "Taco Bell", frequency: "Weekly", target_price: 10, book_id: 1, structure: "variable", user_id: 1, family_id: 1)
+Expense.create(name: "Taco Party", frequency: "Weekly", target_price: 100, book_id: 2, structure: "variable", user_id: 1, family_id: 1)
 
 
 puts 'seeded...'

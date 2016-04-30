@@ -1,13 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  body: MyString
+  body: this transaction makes me uncomfortable
   archive: false
+  expense_id: 1
+  book_id: 1
+  equity_id: 1
+  transaction_id: 1
+  transfer_id: ''
+  vendor_id: 1
+  contact_id: 1
+  liability_id: ''
   user_id: 1
   family_id: 1
-
-two:
-  body: MyString
-  archive: false
-  user_id: 1
-  family_id: 1
+  flag: false

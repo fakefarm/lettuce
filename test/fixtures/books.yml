@@ -1,15 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  tag: MyString
-  note: MyText
+  name: Building a business
+  tag: growth
+  note: These are expenses to build a business
   user_id: 1
   family_id: 1
+  acrhive: false
+  flag: false
 
 two:
-  name: MyString
-  tag: MyString
-  note: MyText
+  name: Food
+  tag: living expenses
+  note: All my food related things
   user_id: 1
   family_id: 1
+  acrhive: false
+  flag: false

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  starting_balance: 3200
+  nickname: primary checking
+  bank_name: bank of dupya
+  user_id: 1
+  family_id: 1
+  flag: false
+
+two:
+  starting_balance: 5200
+  nickname: primary savings
+  bank_name: bank of gotcha
+  user_id: 1
+  family_id: 1
+  flag: false

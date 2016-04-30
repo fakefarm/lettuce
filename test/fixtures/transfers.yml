@@ -3,19 +3,8 @@
 one:
   equity_id: 1
   liability_id: 1
-  amount: MyString
-  note_id: 1
-  task_id: 1
-  reminder_id: 1
+  amount: 1
+  archive: false
   user_id: 1
   family_id: 1
-
-two:
-  equity_id: 1
-  liability_id: 1
-  amount: MyString
-  note_id: 1
-  task_id: 1
-  reminder_id: 1
-  user_id: 1
-  family_id: 1
+  flag: 1
