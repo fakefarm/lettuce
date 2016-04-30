@@ -4,7 +4,7 @@ class CreateTransactions < ActiveRecord::Migration
       t.integer :account_id
       t.integer :vendor_id
       t.integer :amount
-      t.integer :category_id
+      t.integer :book_id
       t.integer :flag_id
       t.integer :note_id
       t.integer :task_id

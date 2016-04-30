@@ -54,7 +54,8 @@ ActiveRecord::Schema.define(version: 20160430051448) do
     t.string   "name"
     t.string   "frequency"
     t.integer  "target_price"
-    t.integer  "category_id"
+    t.boolean  "archive"
+    t.integer  "book_id"
     t.string   "structure"
     t.string   "reminder_id"
     t.integer  "user_id"
@@ -63,6 +64,7 @@ ActiveRecord::Schema.define(version: 20160430051448) do
     t.datetime "updated_at",   null: false
   end
 
+  add_index "expenses", ["book_id"], name: "index_expenses_on_book_id"
   add_index "expenses", ["family_id"], name: "index_expenses_on_family_id"
   add_index "expenses", ["user_id"], name: "index_expenses_on_user_id"
 
@@ -100,7 +102,7 @@ ActiveRecord::Schema.define(version: 20160430051448) do
     t.integer  "account_id"
     t.integer  "vendor_id"
     t.integer  "amount"
-    t.integer  "category_id"
+    t.integer  "book_id"
     t.integer  "flag_id"
     t.integer  "note_id"
     t.integer  "task_id"

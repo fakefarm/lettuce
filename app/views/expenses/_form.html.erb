@@ -24,8 +24,8 @@
     <%= f.number_field :target_price %>
   </div>
   <div class="field">
-    <%= f.label :category_id %><br>
-    <%= collection_select( :expense, :category_id, Book.all, :id, :name, {} ) -%>
+    <%= f.label :book_id %><br>
+    <%= collection_select( :expense, :book_id, Book.all, :id, :name, {} ) -%>
   </div>
   <div class="field">
     <%= f.label :structure %><br>

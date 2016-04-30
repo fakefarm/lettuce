@@ -4,7 +4,7 @@ one:
   name: MyString
   frequency: MyString
   target_price: 1
-  category_id: MyString
+  book_id: MyString
   structure: MyString
   reminder_id: MyString
   user_id: MyString
@@ -14,7 +14,7 @@ two:
   name: MyString
   frequency: MyString
   target_price: 1
-  category_id: MyString
+  book_id: MyString
   structure: MyString
   reminder_id: MyString
   user_id: MyString

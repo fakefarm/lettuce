@@ -18,7 +18,7 @@ class ExpensesControllerTest < ActionController::TestCase
 
   test "should create expense" do
     assert_difference('Expense.count') do
-      post :create, expense: { category_id: @expense.category_id, family_id: @expense.family_id, frequency: @expense.frequency, name: @expense.name, reminder_id: @expense.reminder_id, structure: @expense.structure, target_price: @expense.target_price, user_id: @expense.user_id }
+      post :create, expense: { book_id: @expense.book_id, family_id: @expense.family_id, frequency: @expense.frequency, name: @expense.name, reminder_id: @expense.reminder_id, structure: @expense.structure, target_price: @expense.target_price, user_id: @expense.user_id }
     end
 
     assert_redirected_to expense_path(assigns(:expense))
@@ -35,7 +35,7 @@ class ExpensesControllerTest < ActionController::TestCase
   end
 
   test "should update expense" do
-    patch :update, id: @expense, expense: { category_id: @expense.category_id, family_id: @expense.family_id, frequency: @expense.frequency, name: @expense.name, reminder_id: @expense.reminder_id, structure: @expense.structure, target_price: @expense.target_price, user_id: @expense.user_id }
+    patch :update, id: @expense, expense: { book_id: @expense.book_id, family_id: @expense.family_id, frequency: @expense.frequency, name: @expense.name, reminder_id: @expense.reminder_id, structure: @expense.structure, target_price: @expense.target_price, user_id: @expense.user_id }
     assert_redirected_to expense_path(assigns(:expense))
   end
 

@@ -5,12 +5,13 @@ class CreateExpenses < ActiveRecord::Migration
       t.string :frequency
       t.integer :target_price
       t.boolean :archive         # TODO create a scope that gets all non-archived expenses.
-      t.integer :category_id
+      t.integer :book_id
       t.string :structure
       t.string :reminder_id
       t.integer :user_id
       t.integer :family_id
 
+      t.index :book_id
       t.index :user_id
       t.index :family_id
 
