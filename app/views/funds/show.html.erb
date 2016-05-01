@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Account:</strong>
+  <%= @fund.account_id %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @fund.amount %>
+</p>
+
+<p>
+  <strong>Spend date:</strong>
+  <%= @fund.spend_date %>
+</p>
+
+<p>
+  <strong>Vendor:</strong>
+  <%= @fund.vendor_id %>
+</p>
+
+<%= link_to 'Edit', edit_fund_path(@fund) %> |
+<%= link_to 'Back', funds_path %>
