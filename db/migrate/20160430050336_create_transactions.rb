@@ -6,16 +6,12 @@ class CreateTransactions < ActiveRecord::Migration
       t.integer :amount
       t.integer :expense_id
       t.string :comment
-
       t.integer :user_id
       t.integer :family_id
       t.boolean :flag
-
-      t.index :user_id
-      t.index :family_id
-
-
       t.timestamps null: false
     end
+    add_index :transactions, :user_id
+    add_index :transactions, :family_id
   end
 end

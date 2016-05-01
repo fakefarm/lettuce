@@ -8,7 +8,6 @@ class CreateUsers < ActiveRecord::Migration
       t.string :remember_token, limit: 128, null: false
       t.integer :family_id
     end
-
     add_index :users, :email
     add_index :users, :remember_token
     add_index :users, :family_id

@@ -7,11 +7,9 @@ class CreateEquities < ActiveRecord::Migration
       t.integer :user_id
       t.integer :family_id
       t.boolean :flag
-
-      t.index :user_id
-      t.index :family_id
-
       t.timestamps null: false
     end
+    add_index :equities, :user_id
+    add_index :equities, :family_id
   end
 end

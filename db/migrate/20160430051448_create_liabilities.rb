@@ -7,16 +7,12 @@ class CreateLiabilities < ActiveRecord::Migration
       t.string :bank_name
       t.boolean :archive
       t.integer :current_balance
-
-      t.integer :user_id
       t.integer :family_id
+      t.integer :user_id
       t.boolean :flag
-
-      t.index :user_id
-      t.index :family_id
-
-
       t.timestamps null: false
     end
+    add_index :liabilities, :user_id
+    add_index :liabilities, :family_id
   end
 end

@@ -67,8 +67,8 @@ ActiveRecord::Schema.define(version: 20160501181353) do
     t.string   "bank_name"
     t.boolean  "archive"
     t.integer  "current_balance"
-    t.integer  "user_id"
     t.integer  "family_id"
+    t.integer  "user_id"
     t.boolean  "flag"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
@@ -156,9 +156,11 @@ ActiveRecord::Schema.define(version: 20160501181353) do
     t.string   "encrypted_password", limit: 128, null: false
     t.string   "confirmation_token", limit: 128
     t.string   "remember_token",     limit: 128, null: false
+    t.integer  "family_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email"
+  add_index "users", ["family_id"], name: "index_users_on_family_id"
   add_index "users", ["remember_token"], name: "index_users_on_remember_token"
 
   create_table "vendors", force: :cascade do |t|

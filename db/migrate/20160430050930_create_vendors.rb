@@ -9,9 +9,9 @@ class CreateVendors < ActiveRecord::Migration
       t.integer :user_id
       t.integer :family_id
       t.boolean :flag
-      t.index :user_id
-      t.index :family_id
       t.timestamps null: false
     end
+    add_index :vendors, :user_id
+    add_index :vendors, :family_id
   end
 end
