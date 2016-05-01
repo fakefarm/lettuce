@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Spends</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Equity</th>
+      <th>Vendor</th>
+      <th>Amount</th>
+      <th>expense</th>
+      <th>Comment</th>
+      <th>User</th>
+      <th>Family</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @spends.each do |spend| %>
+      <tr>
+        <td><%= spend.equity_id %></td>
+        <td><%= spend.vendor_id %></td>
+        <td><%= spend.amount %></td>
+        <td><%= spend.expense_id %></td>
+        <td><%= spend.comment %></td>
+        <td><%= spend.user_id %></td>
+        <td><%= spend.family_id %></td>
+        <td><%= link_to 'Show', spend %></td>
+        <td><%= link_to 'Edit', edit_spend_path(spend) %></td>
+        <td><%= link_to 'Destroy', spend, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Spend', new_spend_path %>

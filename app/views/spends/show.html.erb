@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Equity:</strong>
+  <%= @spend.equity_id %>
+</p>
+
+<p>
+  <strong>Vendor:</strong>
+  <%= @spend.vendor_id %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @spend.amount %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @spend.comment %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @spend.user_id %>
+</p>
+
+<p>
+  <strong>Family:</strong>
+  <%= @spend.family_id %>
+</p>
+
+<%= link_to 'Edit', edit_spend_path(@spend) %> |
+<%= link_to 'Back', spends_path %>
