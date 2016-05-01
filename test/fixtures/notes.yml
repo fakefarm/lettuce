@@ -1,12 +1,12 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  body: this transaction makes me uncomfortable
+  body: this spend makes me uncomfortable
   archive: false
   expense_id: 1
   book_id: 1
   equity_id: 1
-  transaction_id: 1
+  spend_id: 1
   transfer_id: ''
   vendor_id: 1
   liability_id: ''

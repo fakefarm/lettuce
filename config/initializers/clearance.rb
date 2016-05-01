@@ -1,5 +1,5 @@
 Clearance.configure do |config|
-  config.allow_sign_up = false
+  config.allow_sign_up = true
   config.cookie_domain = ".lettucebooks.com"
   config.cookie_expiration = lambda { |cookies| 1.year.from_now.utc }
   config.cookie_name = "remember_token"

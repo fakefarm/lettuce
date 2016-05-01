@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
+  resources :funds
   root 'pages#index'
+  resources :preferences
+  resources :families
   resources :liabilities
   resources :vendors
   resources :notes
   resources :tasks
   resources :transfers
-  resources :transactions
+  resources :spends
   resources :equities
   resources :books
   resources :expenses

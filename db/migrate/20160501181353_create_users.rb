@@ -7,6 +7,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :confirmation_token, limit: 128
       t.string :remember_token, limit: 128, null: false
       t.integer :family_id
+      t.integer :preferences_id
+      t.boolean :family_access
     end
     add_index :users, :email
     add_index :users, :remember_token

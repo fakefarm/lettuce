@@ -1,4 +1,4 @@
 class Equity < ActiveRecord::Base
   has_many :transfers
-  has_many :transactions
+  has_many :spends
 end
