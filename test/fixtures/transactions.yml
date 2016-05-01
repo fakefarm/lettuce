@@ -4,7 +4,7 @@ one:
   equity_id: 1
   vendor_id: 1
   amount: 34
-  book_id: 1
+  expense_id: 1
   comment: this comment intentionally left blank
   user_id: 1
   family_id: 1

@@ -12,33 +12,27 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :equity_id %><br>
-      <%= collection_select( :equity, :equity_id, Equity.all, :id, :nickname, {} ) -%>
-  </div>
-  <div class="field">
     <%= f.label :vendor_id %><br>
     <%= collection_select( :equity, :vendor_id, Vendor.all, :id, :name, {} ) -%>
-    <%= link_to 'add new vendor', new_vendor_path -%>
+    <%= link_to 'add new vendor', new_vendor_path, target: "_blank" -%>
   </div>
+
+  <div class="field">
+    <%= f.label :equity_id %><br>
+    <%= collection_select( :equity, :equity_id, Equity.all, :id, :nickname, {} ) -%>
+  </div>
+  
   <div class="field">
     <%= f.label :amount %><br>
     <%= f.number_field :amount %>
   </div>
   <div class="field">
-    <%= f.label :book_id %><br>
-    <%= collection_select( :equity, :book_id, Book.all, :id, :name, {} ) -%>
+    <%= f.label :expense_id %><br>
+    <%= collection_select( :equity, :expense_id, Expense.all, :id, :name, {} ) -%>
   </div>
   <div class="field">
     <%= f.label :comment %><br>
     <%= f.text_field :comment %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :family_id %><br>
-    <%= f.number_field :family_id %>
   </div>
   <div class="actions">
     <%= f.submit %>
