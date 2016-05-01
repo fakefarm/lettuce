@@ -28,22 +28,6 @@ ActiveRecord::Schema.define(version: 20160430051448) do
   add_index "books", ["family_id"], name: "index_books_on_family_id"
   add_index "books", ["user_id"], name: "index_books_on_user_id"
 
-  create_table "contacts", force: :cascade do |t|
-    t.string   "name"
-    t.string   "phone"
-    t.string   "email"
-    t.string   "website"
-    t.boolean  "archive"
-    t.integer  "user_id"
-    t.integer  "family_id"
-    t.boolean  "flag"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "contacts", ["family_id"], name: "index_contacts_on_family_id"
-  add_index "contacts", ["user_id"], name: "index_contacts_on_user_id"
-
   create_table "equities", force: :cascade do |t|
     t.integer  "starting_balance"
     t.string   "nickname"
@@ -102,7 +86,6 @@ ActiveRecord::Schema.define(version: 20160430051448) do
     t.integer  "transaction_id"
     t.integer  "transfer_id"
     t.integer  "vendor_id"
-    t.integer  "contact_id"
     t.integer  "liability_id"
     t.integer  "user_id"
     t.integer  "family_id"
@@ -124,7 +107,6 @@ ActiveRecord::Schema.define(version: 20160430051448) do
     t.integer  "transaction_id"
     t.integer  "transfer_id"
     t.integer  "vendor_id"
-    t.integer  "contact_id"
     t.integer  "liability_id"
     t.integer  "user_id"
     t.integer  "family_id"
@@ -140,7 +122,7 @@ ActiveRecord::Schema.define(version: 20160430051448) do
     t.integer  "equity_id"
     t.integer  "vendor_id"
     t.integer  "amount"
-    t.integer  "book_id"
+    t.integer  "expense_id"
     t.string   "comment"
     t.integer  "user_id"
     t.integer  "family_id"
@@ -169,7 +151,9 @@ ActiveRecord::Schema.define(version: 20160430051448) do
 
   create_table "vendors", force: :cascade do |t|
     t.string   "name"
-    t.integer  "contact_id"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "website"
     t.boolean  "archive"
     t.integer  "user_id"
     t.integer  "family_id"

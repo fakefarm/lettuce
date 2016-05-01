@@ -18,7 +18,7 @@ class VendorsControllerTest < ActionController::TestCase
 
   test "should create vendor" do
     assert_difference('Vendor.count') do
-      post :create, vendor: { archive: @vendor.archive, contact_id: @vendor.contact_id, family_id: @vendor.family_id, name: @vendor.name, user_id: @vendor.user_id }
+      post :create, vendor: { archive: @vendor.archive, family_id: @vendor.family_id, name: @vendor.name, user_id: @vendor.user_id }
     end
 
     assert_redirected_to vendor_path(assigns(:vendor))
@@ -35,7 +35,7 @@ class VendorsControllerTest < ActionController::TestCase
   end
 
   test "should update vendor" do
-    patch :update, id: @vendor, vendor: { archive: @vendor.archive, contact_id: @vendor.contact_id, family_id: @vendor.family_id, name: @vendor.name, user_id: @vendor.user_id }
+    patch :update, id: @vendor, vendor: { archive: @vendor.archive, family_id: @vendor.family_id, name: @vendor.name, user_id: @vendor.user_id }
     assert_redirected_to vendor_path(assigns(:vendor))
   end
 

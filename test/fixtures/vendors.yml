@@ -2,8 +2,10 @@
 
 one:
   name: taco bell
-  contact_id: 1
   archive: false
   flag: false
   family_id: 1
   user_id: 1
+  phone: '404-123-2345'
+  email: 'taco@mac.me'
+  website: 'tacomac.com'

@@ -9,7 +9,6 @@ one:
   transaction_id: 1
   transfer_id: ''
   vendor_id: 1
-  contact_id: 1
   liability_id: ''
   user_id: 1
   family_id: 1

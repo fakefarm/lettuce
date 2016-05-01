@@ -9,8 +9,7 @@ class CreateNotes < ActiveRecord::Migration
       t.integer :equity_id
       t.integer :transaction_id
       t.integer :transfer_id
-      t.integer :vendor_id
-      t.integer :contact_id
+      t.integer :vendor_id      
       t.integer :liability_id
 
       t.integer :user_id

@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root 'pages#index'
   resources :liabilities
-  resources :contacts
   resources :vendors
   resources :notes
   resources :tasks
