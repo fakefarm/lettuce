@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @setting.name %>
+</p>
+
+<p>
+  <strong>Delete account:</strong>
+  <%= @setting.delete_account %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @setting.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_setting_path(@setting) %> |
+<%= link_to 'Back', settings_path %>

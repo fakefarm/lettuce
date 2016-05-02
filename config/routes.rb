@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
+  resources :settings
   resources :funds
   root 'pages#index'
-  resources :preferences
   resources :families
   resources :liabilities
   resources :vendors
