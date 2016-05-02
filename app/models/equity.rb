@@ -1,5 +1,6 @@
 class Equity < ActiveRecord::Base
   has_many :transfers
+  has_many :expenses
   has_many :spends
 
   before_create :assign_current_balance

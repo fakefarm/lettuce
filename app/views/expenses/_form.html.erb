@@ -16,10 +16,6 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :frequency %><br>
-    <%= f.select :frequency, ['once', 'daily', 'weekly', 'monthly', 'quarterly', 'semi-annual', 'annual'], { include_blank: 'how often?' } %>
-  </div>
-  <div class="field">
     <%= f.label :budget %><br>
     <%= f.number_field :budget %>
   </div>
@@ -28,8 +24,16 @@
     <%= collection_select( :expense, :book_id, Book.all, :id, :name, {} ) -%>
   </div>
   <div class="field">
-    <%= f.label :fixed %><br>
-    <%= f.check_box :fixed %>
+    <%= f.label :required %><br>
+    <%= f.check_box :required %>
+  </div>
+  <div class="field">
+    <%= f.label :allocate %><br>
+    <%= f.check_box :allocate %>
+  </div>
+  <div class="field">
+    <%= f.label :equity_id %><br>
+    <%= collection_select( :expense, :equity_id, Equity.all, :id, :nickname, {} ) -%>
   </div>
   <div class="actions">
     <%= f.submit %>

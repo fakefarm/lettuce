@@ -4,7 +4,6 @@ class CreateExpenses < ActiveRecord::Migration
 
       # strings
       t.string :name
-      t.string :frequency
 
       # integers
       t.integer :budget
@@ -12,12 +11,13 @@ class CreateExpenses < ActiveRecord::Migration
       t.integer :book_id
       t.integer :user_id
       t.integer :family_id
-      t.integer :funding_equity_id # if auto-allocate, then this is the equity it comes from
+      t.integer :equity_id # if auto-allocate, then this is the equity it comes from
+      t.integer :allocate_day
 
       # booleans
       t.boolean :archive
       t.boolean :flag
-      t.boolean :fixed
+      t.boolean :required # only check if truly required, like rent, medications, power bills, etc. (few expenses are truly required other than emotionally)
       t.boolean :allocate #auto-allocate funding when it's due.
 
 
@@ -26,6 +26,7 @@ class CreateExpenses < ActiveRecord::Migration
 
     # indexes
     add_index :expenses, :user_id
+    add_index :expenses, :equity_id
     add_index :expenses, :family_id
     add_index :expenses, :book_id
   end

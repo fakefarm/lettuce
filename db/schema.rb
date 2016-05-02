@@ -55,22 +55,23 @@ ActiveRecord::Schema.define(version: 20160502002730) do
 
   create_table "expenses", force: :cascade do |t|
     t.string   "name"
-    t.string   "frequency"
     t.integer  "budget"
     t.integer  "balance"
     t.integer  "book_id"
     t.integer  "user_id"
     t.integer  "family_id"
-    t.integer  "funding_equity_id"
+    t.integer  "equity_id"
+    t.integer  "allocate_day"
     t.boolean  "archive"
     t.boolean  "flag"
-    t.boolean  "fixed"
+    t.boolean  "required"
     t.boolean  "allocate"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   add_index "expenses", ["book_id"], name: "index_expenses_on_book_id"
+  add_index "expenses", ["equity_id"], name: "index_expenses_on_equity_id"
   add_index "expenses", ["family_id"], name: "index_expenses_on_family_id"
   add_index "expenses", ["user_id"], name: "index_expenses_on_user_id"
 
@@ -100,7 +101,6 @@ ActiveRecord::Schema.define(version: 20160502002730) do
     t.integer  "starting_balance"
     t.string   "interest_rate"
     t.string   "nickname"
-    t.string   "bank_name"
     t.integer  "due_day"
     t.boolean  "archive"
     t.integer  "current_balance"
