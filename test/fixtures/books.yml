@@ -6,14 +6,5 @@ one:
   note: These are expenses to build a business
   user_id: 1
   family_id: 1
-  acrhive: false
-  flag: false
-
-two:
-  name: Food
-  tag: living expenses
-  note: All my food related things
-  user_id: 1
-  family_id: 1
-  acrhive: false
+  archive: false
   flag: false

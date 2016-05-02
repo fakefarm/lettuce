@@ -3,11 +3,11 @@
 one:
   account_id: 1
   amount: 1
-  spend_date: 2016-05-01
+  deposit_date: 2016-05-01
   vendor_id: 1
 
 two:
   account_id: 1
   amount: 1
-  spend_date: 2016-05-01
+  deposit_date: 2016-05-01
   vendor_id: 1

@@ -11,15 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160501215840) do
+ActiveRecord::Schema.define(version: 20160502002730) do
+
+  create_table "assets", force: :cascade do |t|
+    t.integer  "equity_id"
+    t.integer  "liability_id"
+    t.integer  "balance"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "books", force: :cascade do |t|
     t.string   "name"
     t.string   "tag"
     t.text     "note"
-    t.boolean  "archive"
     t.integer  "user_id"
     t.integer  "family_id"
+    t.date     "milestone"
+    t.boolean  "archive"
+    t.boolean  "private"
     t.boolean  "flag"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -30,6 +40,7 @@ ActiveRecord::Schema.define(version: 20160501215840) do
 
   create_table "equities", force: :cascade do |t|
     t.integer  "starting_balance"
+    t.integer  "current_balance"
     t.string   "nickname"
     t.string   "bank_name"
     t.integer  "user_id"
@@ -45,15 +56,18 @@ ActiveRecord::Schema.define(version: 20160501215840) do
   create_table "expenses", force: :cascade do |t|
     t.string   "name"
     t.string   "frequency"
-    t.string   "structure"
-    t.integer  "target_price"
+    t.integer  "budget"
+    t.integer  "balance"
     t.integer  "book_id"
     t.integer  "user_id"
     t.integer  "family_id"
+    t.integer  "funding_equity_id"
     t.boolean  "archive"
     t.boolean  "flag"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.boolean  "fixed"
+    t.boolean  "allocate"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   add_index "expenses", ["book_id"], name: "index_expenses_on_book_id"
@@ -119,7 +133,7 @@ ActiveRecord::Schema.define(version: 20160501215840) do
   add_index "notes", ["family_id"], name: "index_notes_on_family_id"
   add_index "notes", ["user_id"], name: "index_notes_on_user_id"
 
-  create_table "preferences", force: :cascade do |t|
+  create_table "settings", force: :cascade do |t|
     t.string   "name"
     t.integer  "user_id"
     t.boolean  "delete_account"
@@ -132,10 +146,12 @@ ActiveRecord::Schema.define(version: 20160501215840) do
     t.integer  "vendor_id"
     t.integer  "amount"
     t.integer  "expense_id"
+    t.integer  "spend_date"
     t.string   "comment"
     t.integer  "user_id"
     t.integer  "family_id"
     t.boolean  "flag"
+    t.boolean  "tax"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,8 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  equity_id: 1
-  liability_id: 1
+  from_id: 1
+  to_id: 1
   amount: 1
   archive: false
   user_id: 1

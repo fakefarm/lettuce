@@ -3,8 +3,8 @@
 costco: 
   name: costco
   frequency: weekly
-  structure: variable
-  target_price: 120
+  fixed: variable
+  budget: 120
   archive: false
   book_id: 1
   user_id: 1

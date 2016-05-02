@@ -10,6 +10,10 @@ So I'm going to take a risk and rather than build another spreadsheet or try to 
 
 ## Backend
 
+## Scaffold
+
+- update fixtures and controller tests
+
 ### Data Modeling
 
 - change the `.all` calls into scoped queries.
@@ -37,4 +41,11 @@ So I'm going to take a risk and rather than build another spreadsheet or try to 
 
 ### UI
 - any items created by another family member should be highlighted somehow
+
+
+## Features
 - fast spend page (asset to spend from, amt) auto adds: task to complete later, and today's date for transaction.
+- balance sheet
+- P&L
+- statement of cashflow??
+- spending by book

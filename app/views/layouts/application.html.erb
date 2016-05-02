@@ -9,9 +9,8 @@
 <body>
 
   <% if signed_in? %>
-    Hello, <%= current_user.preference.try(:name) || "friend!" %>
+    Hello, <%= current_user.setting.try(:name) || "friend!" %>
     <%= button_to 'Sign out', sign_out_path, method: :delete %>
-    <%= link_to 'account', preferences_path %>
   <% else %>
     <%= link_to 'Sign in', sign_in_path %>
   <% end %>
@@ -27,34 +26,45 @@
     <nav class="main-nav">
       <ul>
         <li><%= link_to 'home', root_path %></li>
+        <li><%= link_to 'account', settings_path %></li>
+        <li><%= link_to 'notes', notes_path %></li>
+        <li><%= link_to 'tasks', tasks_path %></li>
       </ul>
     </nav>
     <nav class='new-items'>
-      <h2>New</h2>
+      <h2>Accounts</h2>
       <ul>
-        <li><%= link_to 'book', new_book_path %></li>
-        <li><%= link_to 'expense', new_expense_path %></li>
-        <li><%= link_to 'equity', new_equity_path %></li>
-        <li><%= link_to 'liability', new_liability_path %></li>
-        <li><%= link_to 'spend', new_spend_path %></li>
-        <li><%= link_to 'fund', new_fund_path %></li>
-        <li><%= link_to 'transfer', new_transfer_path %></li>
-        <li><%= link_to 'vendor', new_vendor_path %></li>
+        <li>
+          <%= link_to 'new book', new_book_path %>
+          | <%= link_to 'all books', books_path %>
+         </li>
+        <li>
+          <%= link_to 'new equity', new_equity_path %>
+          | <%= link_to 'all equities', equities_path %>
+         </li>
+        <li>
+          <%= link_to 'new liability', new_liability_path %>
+          | <%= link_to 'all liabilities', liabilities_path %>
+         </li>
       </ul>
-    </nav>
-    <nav class='all-items'>
-      <h2>View all</h2>
+      <h2>Actions</h2>
       <ul>
-        <li><%= link_to 'books', books_path %></li>
-        <li><%= link_to 'expenses', expenses_path %></li>
-        <li><%= link_to 'equities', equities_path %></li>
-        <li><%= link_to 'liabilities', liabilities_path %></li>
-        <li><%= link_to 'notes', notes_path %></li>
-        <li><%= link_to 'tasks', tasks_path %></li>
-        <li><%= link_to 'spends', spends_path %></li>
-        <li><%= link_to 'fund', funds_path %></li>
-        <li><%= link_to 'transfers', transfers_path %></li>
-        <li><%= link_to 'vendors', vendors_path %></li>
+        <li>
+          <%= link_to 'spend', new_spend_path %>
+          | <%= link_to 'receipts', spends_path %>
+        </li>
+        <li>
+          <%= link_to 'fund', new_fund_path %>
+          | <%= link_to 'fund history', funds_path %>
+        </li>
+        <li>
+          <%= link_to 'transfer', new_transfer_path %>
+          | <%= link_to 'transfer history', transfers_path %>
+        </li>
+        <li>
+          <%= link_to 'new vendor', new_vendor_path %>
+          | <%= link_to 'all vendors', vendors_path %>
+        </li>
       </ul>
     </nav>
   </header>
