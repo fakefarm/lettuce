@@ -23,10 +23,13 @@
     <%= f.label :nickname %><br>
     <%= f.text_field :nickname %>
   </div>
+
   <div class="field">
-    <%= f.label :bank_name %><br>
-    <%= f.text_field :bank_name %>
+    <%= f.label :due_day %><br>
+    <%= f.text_field :due_day %>
   </div>
+
+  <div class="field">
     <%= f.hidden_field :user_id, value: current_user.id %>
     <%= f.hidden_field :family_id, value: current_user.family_id %>
   </div>

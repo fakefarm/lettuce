@@ -4,9 +4,9 @@ class CreateLiabilities < ActiveRecord::Migration
       t.integer :starting_balance
       t.string :interest_rate
       t.string :nickname
-      t.string :bank_name
+      t.integer :due_day
       t.boolean :archive
-      t.integer :current_balance
+      t.integer :current_balance #TODO after_create put starting_balance as current_balance.
       t.integer :family_id
       t.integer :user_id
       t.boolean :flag
