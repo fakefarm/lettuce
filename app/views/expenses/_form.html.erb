@@ -17,19 +17,19 @@
   </div>
   <div class="field">
     <%= f.label :frequency %><br>
-    <%= f.text_field :frequency %>
+    <%= f.select :frequency, ['once', 'daily', 'weekly', 'monthly', 'quarterly', 'semi-annual', 'annual'], { include_blank: 'how often?' } %>
   </div>
   <div class="field">
-    <%= f.label :target_price %><br>
-    <%= f.number_field :target_price %>
+    <%= f.label :budget %><br>
+    <%= f.number_field :budget %>
   </div>
   <div class="field">
     <%= f.label :book_id %><br>
     <%= collection_select( :expense, :book_id, Book.all, :id, :name, {} ) -%>
   </div>
   <div class="field">
-    <%= f.label :structure %><br>
-    <%= f.text_field :structure %>
+    <%= f.label :fixed %><br>
+    <%= f.check_box :fixed %>
   </div>
   <div class="actions">
     <%= f.submit %>

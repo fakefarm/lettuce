@@ -1,19 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @book.name %>
-</p>
+<section class='show'>
+  <div class="tag">
+    <%= link_to @book.tag %>
+  </div>
+  <div class='h1'><%= @book.name %></div>
+  <span class='edit-btn'><%= link_to 'edit', edit_book_path(@book) %></span>
+  <p><%= @book.note %></p>
+</section>
 
-<p>
-  <strong>Tag:</strong>
-  <%= @book.tag %>
-</p>
-
-<p>
-  <strong>Note:</strong>
-  <%= @book.note %>
-</p>
-
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'All books', books_path %>
+<div class="h2">
+  Expenses
+</div>

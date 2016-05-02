@@ -10,35 +10,17 @@
       </ul>
     </div>
   <% end %>
-
-  <h2>name of book</h2>
-  <p>
-    A book is the collection of similar spends. Examples include 'home repair', 'auto repair', 'gardening'
-  </p>
-  <p>
-    A book is not something you owe (<%= link_to 'new liability', new_liability_path %>), or own (<%=  link_to 'new equity' %>).
-  </p>
-
   <div class="field">
+    <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
 
-  <h2>attention</h2>
-
   <div class="field">
-    <%= f.label "level of automation - 'high' or 'low' " %><br>
-    <p>
-      Helps get a sense of how often this book should be reviewed.
-    </p>
+    <%= f.label :tag %><br>
     <%= f.text_field :tag %>
   </div>
-
-  <h2>comments</h2>
   <div class="field">
     <%= f.label :note %><br>
-    <p>
-      Explain some of the types of activities that will be paid for through this book.
-    </p>
     <%= f.text_area :note %>
   </div>
   <div class="actions">
