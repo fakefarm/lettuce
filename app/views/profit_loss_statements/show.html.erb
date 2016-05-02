@@ -1,0 +1,77 @@
+<p id="notice"><%= notice %></p>
+
+<div class='h1'>Budget</div>
+<div class="p">
+  Date Created <%= @profit_loss_statement.created_at.strftime("%B %e, %Y") %>
+</div>
+<div class="p">
+  difference $<%= @difference %> (<%= @padding %>%)
+</div>
+
+
+<hr>
+
+<div class="">
+  <div class="h1">
+    Streams (total $<%= @total_streams %>)
+  </div>
+  <div class="p">
+    categorized by equity
+  </div>
+  <br>
+  <% @streams.each do |equity, streams| %>
+    <article class="equity">
+      <div class='p'><%= equity.nickname %></div>
+      <% streams.each do |income| %>
+      <div class="figures h2">
+      <%= income.name %>, $<%= income.amount %>
+      </div>
+      <% end %>
+    </article>
+    <br>
+  <% end %>
+</div>
+
+<hr>
+
+<div class="">
+  <div class="h1">
+    Expenses (total $<%= @total_expenses %>)
+  </div>
+  <div class="p">
+    categorized by book
+  </div>
+  <br>
+  <% @expenses.each do |book, expenses| %>
+    <article class="book">
+      <div class='p'><%= book.name %></div>
+      <% expenses.each do |exp| %>
+      <div class="figures h2  ">
+      <%= exp.name %>, $<%= exp.budget %>
+      </div>
+      <% end %>
+    </article>
+    <br>
+  <% end %>
+</div>
+<hr>
+
+<div class="">
+  <div class="h1">
+    liabilities (total $<%= @total_liabilities %>)
+  </div>
+  <% @liabilities.each do |debt| %>
+    <article class="book">
+      <div class='h2'><%= debt.nickname %></div>
+      <div class="figures">
+        balance: <%= debt.current_balance %>, min. payment:
+        <%= debt.minimum_payment %>
+      </div>
+    </article>
+  <% end %>
+</div>
+
+<hr>
+<div class="h1">
+  total outflows <%= @total_outflow %>
+</div>

@@ -1,0 +1,25 @@
+<%= form_for(@profit_loss_statement) do |f| %>
+  <% if @profit_loss_statement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profit_loss_statement.errors.count, "error") %> prohibited this profit_loss_statement from being saved:</h2>
+
+      <ul>
+      <% @profit_loss_statement.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :timeline %><br>
+    <%= f.text_field :timeline %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
