@@ -9,6 +9,7 @@ class CreateVendors < ActiveRecord::Migration
       t.integer :user_id
       t.integer :family_id
       t.boolean :flag
+      t.text :comment
       t.timestamps null: false
     end
     add_index :vendors, :user_id

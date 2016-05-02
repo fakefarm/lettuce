@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160502002730) do
+ActiveRecord::Schema.define(version: 20160502215738) do
 
   create_table "assets", force: :cascade do |t|
     t.integer  "equity_id"
@@ -232,6 +232,7 @@ ActiveRecord::Schema.define(version: 20160502002730) do
     t.integer  "user_id"
     t.integer  "family_id"
     t.boolean  "flag"
+    t.text     "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
