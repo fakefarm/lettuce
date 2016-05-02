@@ -5,6 +5,7 @@
     <div class="h1">
       <%= link_to equity.nickname, equity %>
     </div>
-    <div class="p">current balance: <%= equity.current_balance %> </div>
+    <div class="p">current balance: $<%= equity.current_balance %> </div>
+    <div class="p"><%= pluralize(equity.streams.count, 'stream') %> for <%= stream_sum(equity) %> at <%= stream_sum(equity) * 12 %> yr.</div>
   </article>
 <% end %>

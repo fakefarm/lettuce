@@ -1,28 +1,22 @@
 class EquitiesController < ApplicationController
   before_action :set_equity, only: [:show, :edit, :update, :destroy]
 
-  # GET /equities
-  # GET /equities.json
   def index
     @equities = Equity.all
   end
 
-  # GET /equities/1
-  # GET /equities/1.json
   def show
+    @stream = Stream.new
+    @streams = Stream.where(equity_id: params[:id])
   end
 
-  # GET /equities/new
   def new
     @equity = Equity.new
   end
 
-  # GET /equities/1/edit
   def edit
   end
 
-  # POST /equities
-  # POST /equities.json
   def create
     @equity = Equity.new(equity_params)
 
@@ -37,8 +31,6 @@ class EquitiesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /equities/1
-  # PATCH/PUT /equities/1.json
   def update
     respond_to do |format|
       if @equity.update(equity_params)
@@ -51,8 +43,6 @@ class EquitiesController < ApplicationController
     end
   end
 
-  # DELETE /equities/1
-  # DELETE /equities/1.json
   def destroy
     @equity.destroy
     respond_to do |format|
@@ -62,12 +52,10 @@ class EquitiesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_equity
       @equity = Equity.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def equity_params
       params.require(:equity).permit(:starting_balance, :nickname, :bank_name, :user_id, :family_id)
     end

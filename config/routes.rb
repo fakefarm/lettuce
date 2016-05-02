@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :streams
   resources :settings
   resources :funds
   root 'pages#index'

@@ -160,6 +160,17 @@ ActiveRecord::Schema.define(version: 20160502002730) do
   add_index "spends", ["family_id"], name: "index_spends_on_family_id"
   add_index "spends", ["user_id"], name: "index_spends_on_user_id"
 
+  create_table "streams", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "amount"
+    t.boolean  "estimate"
+    t.boolean  "auto_allocate"
+    t.integer  "equity_id"
+    t.integer  "user_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
   create_table "tasks", force: :cascade do |t|
     t.string   "title"
     t.boolean  "complete"

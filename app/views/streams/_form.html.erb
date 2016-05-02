@@ -1,29 +1,3 @@
-<p id="notice"><%= notice %></p>
-
-<section class='show'>
-  <div class='h1'><%= @equity.nickname %></div>
-  <span class='edit-btn'><%= link_to 'edit', edit_equity_path(@equity) %>
-  | <%= link_to 'delete', @equity, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-  <p><%= @equity.current_balance %></p>
-</section>
-
-<div class="h2">
-  Streams
-</div>
-
-<table>
-  <tbody>
-    <% @streams.each do |stream| %>
-      <tr>
-        <td><%= link_to stream.name, edit_stream_path(stream)%></td>
-        <td><%= stream.amount %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<hr>
-
 <%= form_for(@stream) do |f| %>
   <% if @stream.errors.any? %>
     <div id="error_explanation">
@@ -54,7 +28,10 @@
     <%= f.check_box :auto_allocate %>
   </div>
   <div class="field">
-    <%= f.hidden_field :equity_id, value: params[:id] %>
+    <%= f.label :equity_id %><br>
+    <%= collection_select :stream, :equity_id, Equity.all, :id, :nickname %>
+  </div>
+  <div class="field">
     <%= f.hidden_field :user_id, value: current_user.id %>
   </div>
   <div class="actions">
