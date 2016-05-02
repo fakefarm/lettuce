@@ -12,7 +12,7 @@ So I'm going to take a risk and rather than build another spreadsheet or try to 
 
 ## Scaffold
 
-- update fixtures and controller tests
+- [ ] update fixtures and controller tests
 
 ### Data Modeling
 
@@ -49,3 +49,14 @@ So I'm going to take a risk and rather than build another spreadsheet or try to 
 - P&L
 - statement of cashflow??
 - spending by book
+
+
+# user can...
+- [x] create a book
+- [ ] assign expenses to a book
+- [ ] view all expenses related to a book
+- [ ] view all expenses
+- [ ] see total budget for a book based on underlying expenses
+- [ ] see actual amounts spent on expense
+- [ ] automate allocation of capital to expense budget based on time and account settings
+- [ ] close a book and all it's connected expenses
