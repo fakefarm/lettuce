@@ -1,34 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Starting balance:</strong>
-  <%= @liability.starting_balance %>
-</p>
+<section class='show'>
+  <div class="tag">
+    <%= link_to @liability.due_day %>
+  </div>
+  <div class='h1'><%= @liability.nickname %></div>
+  <span class='edit-btn'><%= link_to 'edit', edit_liability_path(@liability) %></span>
+  <p><%= @liability.current_balance %></p>
+  <p><%= @liability.interest_rate %></p>
+</section>
 
-<p>
-  <strong>Interest rate:</strong>
-  <%= @liability.interest_rate %>
-</p>
-
-<p>
-  <strong>Nickname:</strong>
-  <%= @liability.nickname %>
-</p>
-
-<p>
-  <strong>Bank name:</strong>
-  <%= @liability.bank_name %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @liability.user_id %>
-</p>
-
-<p>
-  <strong>Family:</strong>
-  <%= @liability.family_id %>
-</p>
-
-<%= link_to 'Edit', edit_liability_path(@liability) %> |
-<%= link_to 'Back', liabilities_path %>
+<div class="h2">
+  Transaction history
+</div>

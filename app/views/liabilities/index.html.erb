@@ -1,37 +1,11 @@
-<p id="notice"><%= notice %></p>
+<h1 class="h1">Liabilities</h1>
 
-<h1>Listing Liabilities</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Starting balance</th>
-      <th>Interest rate</th>
-      <th>Nickname</th>
-      <th>Bank name</th>
-      <th>User</th>
-      <th>Family</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @liabilities.each do |liability| %>
-      <tr>
-        <td><%= liability.starting_balance %></td>
-        <td><%= liability.interest_rate %></td>
-        <td><%= liability.nickname %></td>
-        <td><%= liability.bank_name %></td>
-        <td><%= liability.user_id %></td>
-        <td><%= liability.family_id %></td>
-        <td><%= link_to 'Show', liability %></td>
-        <td><%= link_to 'Edit', edit_liability_path(liability) %></td>
-        <td><%= link_to 'Destroy', liability, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Liability', new_liability_path %>
+<% @liabilities.each do |liability| %>
+  <article class="list-view">
+    <div class="tag"><%= link_to liability.due_day %></div>
+    <div class="h1">
+      <%= link_to liability.nickname, liability %>
+    </div>
+    <div class="p">current_balance: <%= liability.current_balance %> </div>
+  </article>
+<% end %>
