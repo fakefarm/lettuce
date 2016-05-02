@@ -16,39 +16,43 @@ So I'm going to take a risk and rather than build another spreadsheet or try to 
 
 ### Data Modeling
 
-- change the `.all` calls into scoped queries.
-- add associations as needed
-- add validations as needed
-- connect tasks, notes to models
-- build reminders / reports models
-- create an Assets model that is an `after_create` of liabilities and equity. Add after_callback to archive when liabilities / equity are archived.
+- [ ] change the `.all` calls into scoped queries.
+- [ ] add associations as needed
+- [ ] add validations as needed
+- [ ] connect tasks, notes to models
+- [ ] Reminders for due dates
+- [ ] Assets model that is an `after_create` of liabilities and equity. Add after_callback to archive when liabilities / equity are archived.
+- [ ] Allocation model for adding capital to expenses from BOTH equities and liabilities
+- [ ] Reports model for an overview snapshots of existing issues
+- [ ] Streams model to manage planning for income.
+- [ ] Audit model that has a checklist to review all accounts every 90 days and make necessary adjustments
 
 ### Methods
 
-- add up totals
-- impact balances by funding, spending, transfers (FST)
+- [ ] add up totals
+- [ ] impact balances by funding, spending, transfers (FST)
 
 ### Auth
 
-- connect user to family_id
+- [ ] connect user to family_id
 
 ## Frontend
 
 ### Javascript
 
-- sort table
-- make it easy to add a new vendor from current (FST) view.
+- [ ] sort table
+- [ ] make it easy to add a new vendor from current (FST) view.
 
 ### UI
-- any items created by another family member should be highlighted somehow
+- [ ] any items created by another family member should be highlighted somehow
 
 
 ## Features
-- fast spend page (asset to spend from, amt) auto adds: task to complete later, and today's date for transaction.
-- balance sheet
-- P&L
-- statement of cashflow??
-- spending by book
+- [ ] fast spend page (asset to spend from, amt) auto adds: task to complete later, and today's date for transaction.
+- [ ] balance sheet
+- [ ] P&L
+- [ ] statement of cashflow??
+- [ ] spending by book
 
 
 # user can...
