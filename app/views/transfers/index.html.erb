@@ -20,8 +20,8 @@
   <tbody>
     <% @transfers.each do |transfer| %>
       <tr>
-        <td><%= transfer.equity_id %></td>
-        <td><%= transfer.liability_id %></td>
+        <td><%= transfer.from_id %></td>
+        <td><%= transfer.to_id %></td>
         <td><%= transfer.amount %></td>
         <td><%= transfer.user_id %></td>
         <td><%= transfer.family_id %></td>
