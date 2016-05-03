@@ -101,6 +101,7 @@ ActiveRecord::Schema.define(version: 20160502224813) do
     t.integer  "starting_balance"
     t.string   "interest_rate"
     t.string   "nickname"
+    t.integer  "minimum_payment"
     t.integer  "due_day"
     t.boolean  "archive"
     t.integer  "current_balance"
