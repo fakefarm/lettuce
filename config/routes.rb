@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :help
   resources :profit_loss_statements
   resources :streams
   resources :settings

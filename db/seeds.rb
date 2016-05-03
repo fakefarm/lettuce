@@ -33,5 +33,8 @@ Vendor.create(name: 'taco bell', phone: '404-123-2345', email: 'taco@mac.me', we
 
 User.create(email: 'dave@me.com', password: 'letmein')
 
+Help.create( title: "Streams - what are they?", body: "Streams are your income. they often feel like they are ours but as many know, income streams can dry up. They are the income into a particular equity", tags: 'terms')
+Help.create( title: 'what is an equity?', body: "an equity is anything you OWN. these are items that nobody can take away from you and you have full controll over. this is different than a <a href="">liability</a> which is something you OWE", tags: 'terms')
+Help.create( title: 'What is a book?', body: 'A book is a collection of like expenses',tags: 'terms')
 
 puts 'seeded...'
