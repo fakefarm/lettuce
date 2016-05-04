@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<div class='h1'>Balance Sheet</div>
+
+<hr>
+
+
+<div class="account-group">
+  <p>
+    Liabilities
+  </p>
+  <% @liabilities.each do |debt| %>
+    <article class="book">
+      <div class='h2'><%= debt.nickname %></div>
+      <div class="figures">
+        Current Balance <%= debt.current_balance %>
+      </div>
+    </article>
+  <% end %>
+  <div class="p">
+    Total: $<%= @total_liabilities %>
+  </div>
+</div>
+
+<br>
+
+<div class="account-group">
+  <p>
+    Equities
+  </p>
+  <% @equities.each do |equity| %>
+    <article class="book">
+      <div class='h2'><%= equity.nickname %></div>
+      <div class="figures">
+        Current Balance <%= equity.current_balance %>
+      </div>
+    </article>
+  <% end %>
+  <div class="p">
+    Total: $<%= @equities_balance %>
+  </div>
+</div>
+<hr>
+<div class="account-group">
+  Total Assets <%= @asset_balance %>
+</div>
