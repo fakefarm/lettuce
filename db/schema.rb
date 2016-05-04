@@ -17,9 +17,12 @@ ActiveRecord::Schema.define(version: 20160503004445) do
     t.integer  "equity_id"
     t.integer  "liability_id"
     t.integer  "balance"
+    t.integer  "user_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
+
+  add_index "assets", ["user_id"], name: "index_assets_on_user_id"
 
   create_table "books", force: :cascade do |t|
     t.string   "name"
