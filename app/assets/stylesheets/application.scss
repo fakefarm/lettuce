@@ -1,11 +1,29 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:300,100|Roboto+Condensed:400,300,700);
+
+
+$slab: 'Roboto Slab';
+$cond: 'Roboto Condensed';
+$light-gray: #eee;
 $gray: #aaa;
 $pink: #e29de6;
+
+@mixin headline-font {
+  font-family: $cond, serif;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+@mixin body-font {
+  font-family: $slab, helvetica, sans-serif;
+  font-weight: 300;
+}
+
 
 body {
   width: 80%;
   margin: 0;
   padding: 0;
-  font-family: 'lucida grande';
+  @include body-font;
 }
 
 .content {
@@ -29,9 +47,11 @@ header {
 .tag { color: $gray; }
 
 .h1 {
-  font-size: 2em;
+  @include headline-font;
 }
-.h2 { font-size: 1.5em; }
+.h2 {
+  font-size: 1.5em;
+}
 
 
 .show {
@@ -52,4 +72,12 @@ h1,
 p {
   margin: 0;
   padding: 0;
+}
+
+// P&L styling
+
+.account-group {
+  border-radius: 4px;
+  border: 1px solid $light-gray;
+  padding: 1.25em;
 }
