@@ -7,7 +7,7 @@ class CreateLiabilities < ActiveRecord::Migration
       t.integer :minimum_payment
       t.integer :due_day
       t.boolean :archive
-      t.integer :current_balance #TODO after_create put starting_balance as current_balance.
+      t.integer :current_balance
       t.integer :family_id
       t.integer :user_id
       t.boolean :flag

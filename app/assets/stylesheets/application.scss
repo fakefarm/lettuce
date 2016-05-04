@@ -6,6 +6,9 @@ $cond: 'Roboto Condensed';
 $light-gray: #eee;
 $gray: #aaa;
 $pink: #e29de6;
+$green: #7ee8b5;
+$blue: #1789af;
+$sunny: #fefc7a;
 
 @mixin headline-font {
   font-family: $cond, serif;
@@ -20,14 +23,18 @@ $pink: #e29de6;
 
 
 body {
-  width: 80%;
   margin: 0;
   padding: 0;
   @include body-font;
+  border: 15px solid $blue;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .content {
-  width: 100%;
   padding: 3em;
 }
 
@@ -80,4 +87,26 @@ p {
   border-radius: 4px;
   border: 1px solid $light-gray;
   padding: 1.25em;
+}
+
+.top {
+  background: $green;
+  background-image: linear-gradient(-42deg, #8CFF8A, #6CD76A);
+  overflow: auto;
+  padding: 3em;
+  border-bottom: 7px solid $sunny;
+  .h1 {
+    color: white;
+    float: left;
+  }
+}
+.user-actions {
+  float: right;
+  padding-right: 1em;
+  a {
+    color: $blue;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 0 0.25em;
+  }
 }

@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Lettucebooks</title>
+  <title>Lettuce books, together.</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-  <li><%= link_to 'home', root_path %></li>
-  <% if signed_in? %>
-    Hello, <%= current_user.setting.try(:name) || "friend!" %>
-    <%= button_to 'Sign out', sign_out_path, method: :delete %>
-    <li><%= link_to 'settings', settings_path %></li>
-    <li><%= link_to 'notes', notes_path %></li>
-    <li><%= link_to 'tasks', tasks_path %></li>
-    <li><%= link_to 'help', help_index_path %></li>
-  <% else %>
-    <%= link_to 'Sign in', sign_in_path %>
-  <% end %>
+  <section class='top'>
+    <div class="h1">
+      Lettuce books, together.
+    </div>
+    <div class="user-actions">
+      <% if signed_in? %>
+      <%= link_to 'home', root_path %>
+      <%= link_to 'settings', settings_path %>
+      <%= link_to 'notes', notes_path %>
+      <%= link_to 'tasks', tasks_path %>
+      <%= link_to 'help', help_index_path %>
+      <%= link_to 'log out', sign_out_path, method: :delete %>
+      <% else %>
+      <%= link_to 'log in', sign_in_path %>
+      <% end %>
+    </div>
+  </section>
+
 
   <div id="flash">
     <% flash.each do |key, value| %>
@@ -56,6 +63,9 @@
       <ul>
         <li>
           <%= link_to 'profit and loss', profit_loss_statements_path %>
+        </li>
+        <li>
+          <%= link_to 'balance sheets', balance_sheets_path %>
         </li>
       </ul>
       <h2>Receipts</h2>
