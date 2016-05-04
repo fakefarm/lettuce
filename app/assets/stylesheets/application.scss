@@ -24,14 +24,15 @@ $sunny: #fefc7a;
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 1em;
   @include body-font;
-  border: 15px solid $blue;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  background-image: linear-gradient(90deg, #29A6C2, #7FD3E6);
+}
+
+.wrapper {
+  background: white;
+  overflow: auto;
+  padding-bottom: 14em;
 }
 
 .content {
