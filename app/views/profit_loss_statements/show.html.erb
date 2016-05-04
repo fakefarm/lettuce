@@ -11,12 +11,9 @@
 
 <hr>
 
-<div class="">
-  <div class="h1">
-    Streams (total $<%= @total_streams %>)
-  </div>
+<div class="account-group">
   <div class="p">
-    categorized by equity
+    Income streams
   </div>
   <br>
   <% @streams.each do |equity, streams| %>
@@ -29,17 +26,17 @@
       <% end %>
     </article>
     <br>
+    <div class="p">
+      Total $<%= @total_streams %>
+    </div>
   <% end %>
 </div>
 
 <hr>
 
-<div class="">
-  <div class="h1">
-    Expenses (total $<%= @total_expenses %>)
-  </div>
+<div class="account-group">
   <div class="p">
-    categorized by book
+    Expenses (categorized by book)
   </div>
   <br>
   <% @expenses.each do |book, expenses| %>
@@ -52,26 +49,31 @@
       <% end %>
     </article>
     <br>
+    <div class="p">
+      Total $<%= @total_expenses %>
+    </div>
   <% end %>
 </div>
 <hr>
 
-<div class="">
-  <div class="h1">
-    liabilities (total $<%= @total_liabilities %>)
-  </div>
+<div class="account-group">
+  <p>
+    Liabilities
+  </p>
   <% @liabilities.each do |debt| %>
     <article class="book">
       <div class='h2'><%= debt.nickname %></div>
       <div class="figures">
-        balance: <%= debt.current_balance %>, min. payment:
-        <%= debt.minimum_payment %>
+        Min. payment: <%= debt.minimum_payment %>
       </div>
     </article>
   <% end %>
+  <div class="p">
+    Total: $<%= @total_liabilities %>
+  </div>
 </div>
 
 <hr>
-<div class="h1">
-  total outflows <%= @total_outflow %>
+<div class="p">
+  Total liabilities + expenses: <%= @total_outflow %>
 </div>
