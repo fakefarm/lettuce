@@ -41,6 +41,7 @@
             <li><%= link_to 'spend', new_spend_path %></li>
             <li><%= link_to 'transfer', new_transfer_path %></li>
             <li><%= link_to 'fund', new_fund_path %></li>
+            <li><%= link_to 'plan', new_plan_path %></li>
           </ul>
         </nav>
         <nav class='new-items'>
@@ -82,6 +83,10 @@
           </ul>
           <h2>Overviews</h2>
           <ul>
+            <li>
+              <%= link_to 'plans', plans_path %> |
+              <%= link_to 'new', new_plan_path %>
+            </li>
             <li>
               <%= link_to 'vendors', vendors_path %> |
               <%= link_to 'new', new_vendor_path %>

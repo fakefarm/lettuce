@@ -7,6 +7,6 @@
     <div class="tag"><%= link_to book.tag %></div>
     <div class="h1"><%= link_to book.name, book %></div>
     <div class="p"><%= book.note %></div>
-    <div class="p"><%= pluralize(book.expenses.count, 'expense') %></div>
+    <div class="h2"><%= pluralize(book.expenses.count, 'expense') %></div>
   </article>
 <% end %>

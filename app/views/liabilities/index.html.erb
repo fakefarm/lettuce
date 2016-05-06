@@ -1,11 +1,16 @@
-<h1 class="h1">Liabilities</h1>
+<h1 class="h2">Liabilities</h1>
+<br>
 
 <% @liabilities.each do |liability| %>
   <article class="list-view">
-    <div class="tag"><%= link_to liability.due_day %></div>
     <div class="h1">
       <%= link_to liability.nickname, liability %>
     </div>
-    <div class="p">current_balance: <%= liability.current_balance %> </div>
+    <div class="p">Balance $<%= liability.current_balance %> </div>
   </article>
 <% end %>
+<br>
+<div class="h2">
+  Total liabilities $<%= @total %>
+
+</div>
