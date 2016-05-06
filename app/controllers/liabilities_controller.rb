@@ -69,6 +69,6 @@ class LiabilitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def liability_params
-      params.require(:liability).permit(:starting_balance, :interest_rate, :nickname, :bank_name, :user_id, :family_id, :due_day)
+      params.require(:liability).permit(:starting_balance, :interest_rate, :nickname, :bank_name, :user_id, :family_id, :due_day, :minimum_payment)
     end
 end
