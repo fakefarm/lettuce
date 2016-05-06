@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160504041347) do
+ActiveRecord::Schema.define(version: 20160506030752) do
 
   create_table "assets", force: :cascade do |t|
     t.integer  "equity_id"
@@ -153,6 +153,22 @@ ActiveRecord::Schema.define(version: 20160504041347) do
 
   add_index "notes", ["family_id"], name: "index_notes_on_family_id"
   add_index "notes", ["user_id"], name: "index_notes_on_user_id"
+
+  create_table "plans", force: :cascade do |t|
+    t.string   "image_url"
+    t.string   "name"
+    t.date     "launch_date"
+    t.text     "summary"
+    t.integer  "investment_time"
+    t.integer  "investment_money"
+    t.integer  "mo_goal"
+    t.string   "project_url"
+    t.string   "business_plan_url"
+    t.string   "vendor_url"
+    t.string   "customer_url"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
 
   create_table "profit_loss_statements", force: :cascade do |t|
     t.string   "timeline"

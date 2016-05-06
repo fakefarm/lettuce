@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :plans
   resources :balance_sheets
   resources :help
   resources :profit_loss_statements

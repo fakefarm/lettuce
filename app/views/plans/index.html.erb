@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Plans</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Image url</th>
+      <th>Name</th>
+      <th>Launch date</th>
+      <th>Summary</th>
+      <th>Investment time</th>
+      <th>Investment money</th>
+      <th>Mo goal</th>
+      <th>Project url</th>
+      <th>Business plan url</th>
+      <th>Vendor url</th>
+      <th>Customer url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @plans.each do |plan| %>
+      <tr>
+        <td><%= plan.image_url %></td>
+        <td><%= plan.name %></td>
+        <td><%= plan.launch_date %></td>
+        <td><%= plan.summary %></td>
+        <td><%= plan.investment_time %></td>
+        <td><%= plan.investment_money %></td>
+        <td><%= plan.mo_goal %></td>
+        <td><%= plan.project_url %></td>
+        <td><%= plan.business_plan_url %></td>
+        <td><%= plan.vendor_url %></td>
+        <td><%= plan.customer_url %></td>
+        <td><%= link_to 'Show', plan %></td>
+        <td><%= link_to 'Edit', edit_plan_path(plan) %></td>
+        <td><%= link_to 'Destroy', plan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Plan', new_plan_path %>

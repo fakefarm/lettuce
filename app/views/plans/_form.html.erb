@@ -1,0 +1,61 @@
+<%= form_for(@plan) do |f| %>
+  <% if @plan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@plan.errors.count, "error") %> prohibited this plan from being saved:</h2>
+
+      <ul>
+      <% @plan.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :image_url %><br>
+    <%= f.text_field :image_url %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :launch_date %><br>
+    <%= f.date_select :launch_date %>
+  </div>
+  <div class="field">
+    <%= f.label :summary %><br>
+    <%= f.text_area :summary %>
+  </div>
+  <div class="field">
+    <%= f.label :investment_time %><br>
+    <%= f.number_field :investment_time %>
+  </div>
+  <div class="field">
+    <%= f.label :investment_money %><br>
+    <%= f.number_field :investment_money %>
+  </div>
+  <div class="field">
+    <%= f.label :mo_goal %><br>
+    <%= f.number_field :mo_goal %>
+  </div>
+  <div class="field">
+    <%= f.label :project_url %><br>
+    <%= f.text_field :project_url %>
+  </div>
+  <div class="field">
+    <%= f.label :business_plan_url %><br>
+    <%= f.text_field :business_plan_url %>
+  </div>
+  <div class="field">
+    <%= f.label :vendor_url %><br>
+    <%= f.text_field :vendor_url %>
+  </div>
+  <div class="field">
+    <%= f.label :customer_url %><br>
+    <%= f.text_field :customer_url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

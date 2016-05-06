@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @plan.image_url %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @plan.name %>
+</p>
+
+<p>
+  <strong>Launch date:</strong>
+  <%= @plan.launch_date %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @plan.summary %>
+</p>
+
+<p>
+  <strong>Investment time:</strong>
+  <%= @plan.investment_time %>
+</p>
+
+<p>
+  <strong>Investment money:</strong>
+  <%= @plan.investment_money %>
+</p>
+
+<p>
+  <strong>Mo goal:</strong>
+  <%= @plan.mo_goal %>
+</p>
+
+<p>
+  <strong>Project url:</strong>
+  <%= @plan.project_url %>
+</p>
+
+<p>
+  <strong>Business plan url:</strong>
+  <%= @plan.business_plan_url %>
+</p>
+
+<p>
+  <strong>Vendor url:</strong>
+  <%= @plan.vendor_url %>
+</p>
+
+<p>
+  <strong>Customer url:</strong>
+  <%= @plan.customer_url %>
+</p>
+
+<%= link_to 'Edit', edit_plan_path(@plan) %> |
+<%= link_to 'Back', plans_path %>

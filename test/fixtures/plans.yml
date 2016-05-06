@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  image_url: MyString
+  name: MyString
+  launch_date: 2016-05-05
+  summary: MyText
+  investment_time: 1
+  investment_money: 1
+  mo_goal: 1
+  project_url: MyString
+  business_plan_url: MyString
+  vendor_url: MyString
+  customer_url: MyString
+
+two:
+  image_url: MyString
+  name: MyString
+  launch_date: 2016-05-05
+  summary: MyText
+  investment_time: 1
+  investment_money: 1
+  mo_goal: 1
+  project_url: MyString
+  business_plan_url: MyString
+  vendor_url: MyString
+  customer_url: MyString
