@@ -5,6 +5,7 @@ class LiabilitiesController < ApplicationController
   # GET /liabilities.json
   def index
     @liabilities = Liability.all
+    @total = Liability.sum(:current_balance)
   end
 
   # GET /liabilities/1

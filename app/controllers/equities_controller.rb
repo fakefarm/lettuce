@@ -3,6 +3,7 @@ class EquitiesController < ApplicationController
 
   def index
     @equities = Equity.all
+    @total = Equity.sum(:current_balance)
   end
 
   def show
