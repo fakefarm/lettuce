@@ -13,6 +13,6 @@ private
   end
 
   def update_asset_balance
-    Asset.find_by_equity_id(self.id).update_attribute('balance', self.current_balance)
+    Asset.find_by_liability_id(self.id).update_attribute('balance', self.current_balance)
   end
 end
