@@ -6,18 +6,17 @@
 
 
 <div class="account-group">
-  <p>
+  <div class='h2'>
     Liabilities
-  </p>
+  </div>
   <% @liabilities.each do |debt| %>
     <article class="book">
-      <div class='h2'><%= debt.nickname %></div>
-      <div class="figures">
-        Current Balance <%= debt.current_balance %>
-      </div>
+      <div class='p'><%= debt.nickname %>  $<%= debt.current_balance %></div>
     </article>
+    <br>
   <% end %>
-  <div class="p">
+  <div class="h2">
+    <hr>
     Total: $<%= @total_liabilities %>
   </div>
 </div>
@@ -25,22 +24,26 @@
 <br>
 
 <div class="account-group">
-  <p>
+  <div class='h2'>
     Equities
-  </p>
+  </div>
   <% @equities.each do |equity| %>
     <article class="book">
-      <div class='h2'><%= equity.nickname %></div>
-      <div class="figures">
-        Current Balance <%= equity.current_balance %>
-      </div>
+      <div class='p'><%= equity.nickname %>  $<%= equity.current_balance %></div>
     </article>
+    <br>
   <% end %>
-  <div class="p">
+  <div class="h2">
+    <hr>
     Total: $<%= @equities_balance %>
   </div>
 </div>
 <hr>
 <div class="account-group">
-  Total Assets <%= @asset_balance %>
+  <div class="h2">
+    Total Assets $<%= @asset_balance %>
+  </div>
+  <p>
+    Net Worth $<%= @equities_balance - @total_liabilities %>
+  </p>
 </div>
