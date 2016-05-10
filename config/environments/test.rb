@@ -1,4 +1,34 @@
 Rails.application.configure do
+
+  # Clearance
+  # https://github.com/thoughtbot/clearance
+  # =====================
+
+  config.middleware.use Clearance::BackDoor
+
+  # Clearance includes middleware that avoids wasting time spent visiting, loading, and submitting the sign in form. It instead signs in the designated user directly.
+
+
+  # Usage:
+  #
+  # visit root_path(as: user)
+
+  # Additionally, if User#to_param is overridden, you can pass a block in order to override the default behavior:
+  #
+  #   config.middleware.use Clearance::BackDoor do |username|
+  #     Clearance.configuration.user_model.find_by(username: username)
+  #   end
+  # TODO if username is overridden
+
+
+
+
+
+
+
+
+
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # The test environment is used exclusively to run your application's
