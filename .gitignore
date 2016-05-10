@@ -22,7 +22,6 @@ apps/**/vendor/*
 apps/**/vendor/*
 
 .env
-.ruby-version
 
 todo
 
