@@ -1,11 +1,4 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
   name: MyString
-  delete_account: false
   user_id: 1
-
-two:
-  name: MyString
-  delete_account: false
-  user_id: 1
+  delete_account: true

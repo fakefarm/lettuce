@@ -1,11 +1,11 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
   equity_id: 1
   vendor_id: 1
-  amount: 34
+  amount: 1
   expense_id: 1
-  comment: this comment intentionally left blank
+  spend_date: 1
+  comment: MyString
   user_id: 1
   family_id: 1
-  flag: false
+  flag: true
+  tax: true

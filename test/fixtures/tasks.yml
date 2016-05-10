@@ -1,16 +1,14 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  title: cancel this account
-  complete: false
-  archive: false
+  title: MyString
+  complete: true
+  archive: true
   expense_id: 1
   book_id: 1
   equity_id: 1
   spend_id: 1
-  transfer_id: ''
+  transfer_id: 1
   vendor_id: 1
-  liability_id: ''
+  liability_id: 1
   user_id: 1
   family_id: 1
-  flag: false
+  flag: true

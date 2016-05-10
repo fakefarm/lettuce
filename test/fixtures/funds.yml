@@ -1,13 +1,7 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
   account_id: 1
   amount: 1
   deposit_date: 2016-05-01
   vendor_id: 1
-
-two:
-  account_id: 1
-  amount: 1
-  deposit_date: 2016-05-01
-  vendor_id: 1
+  user_id: 1
+  family_id: 1

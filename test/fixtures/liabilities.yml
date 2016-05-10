@@ -1,12 +1,11 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  starting_balance: 3400
-  current_balance: 3709
-  interest_rate: 8.3
-  nickname: learning to code
-  bank_name: bank of debty
-  user_id: 1
+  starting_balance: 1
+  interest_rate: MyString
+  nickname: MyString
+  minimum_payment: 1
+  due_day: 1
+  archive: true
+  current_balance: 1
   family_id: 1
-  archive: false
-  flag: false
+  user_id: 1
+  flag: true

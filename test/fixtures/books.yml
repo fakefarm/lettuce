@@ -1,10 +1,10 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  name: Building a business
-  tag: growth
-  note: These are expenses to build a business
+  name: MyString
+  tag: MyString
+  note: text goes here
   user_id: 1
   family_id: 1
-  archive: false
-  flag: false
+  milestone: 2016-05-01
+  archive: true
+  private: true
+  flag: true

@@ -1,11 +1,10 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  name: taco bell
-  archive: false
-  flag: false
-  family_id: 1
+  name: MyString
+  phone: 303456987
+  email: email@fake.com
+  website: fake.com
+  archive: true
   user_id: 1
-  phone: '404-123-2345'
-  email: 'taco@mac.me'
-  website: 'tacomac.com'
+  family_id: 1
+  flag: true
+  comment: tex

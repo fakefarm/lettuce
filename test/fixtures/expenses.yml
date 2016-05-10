@@ -1,12 +1,13 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-costco: 
-  name: costco
-  frequency: weekly
-  fixed: variable
-  budget: 120
-  archive: false
+one:
+  name: MyString
+  budget: 1
+  balance: 1
   book_id: 1
   user_id: 1
   family_id: 1
-  flag: false
+  equity_id: 1
+  allocate_day: 1
+  archive: true
+  flag: true
+  required: true
+  allocate: true
